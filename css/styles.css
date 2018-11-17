@@ -43,13 +43,13 @@ main {
 	text-align: center;
 }
 
-main > .intro {
+main>.intro {
 	font-family: 'Reem Kufi', sans-serif;
 	font-size: 3.75em;
 	font-weight: 600;
 }
 
-main > .tagline {
+main>.tagline {
 	font-size: 1.5rem;
 	margin: 1.5rem 0;
 	font-weight: 100;
@@ -65,7 +65,165 @@ main > .tagline {
 
 .devto svg {
 	margin-bottom: -0.20rem;
-	margin-left: 0.675rem;;
+	margin-left: 0.675rem;
+	;
 	width: 2.65rem;
 	height: 2.65rem;
+}
+
+main.green-white {
+	background: #43A047;
+	color: #FAFAFA;
+}
+
+main.green-white .icons-social a {
+	color: #FAFAFA;
+}
+
+main.green-white .icons-social a svg path {
+	fill: #FAFAFA;
+}
+
+
+main.gray-white {
+	background: #485564;
+	color: #FAFAFA;
+}
+
+main.gray-white .icons-social a {
+	color: #FAFAFA;
+}
+
+main.gray-white .icons-social a svg path {
+	fill: #FAFAFA;
+}
+
+main.indigo-white {
+	background: #303F9F;
+	color: #FAFAFA;
+}
+
+main.indigo-white .icons-social a {
+	color: #FAFAFA;
+}
+
+main.indigo-white .icons-social a svg path {
+	fill: #FAFAFA;
+}
+
+main.red-white {
+	background: #AF3D4E;
+	color: #FAFAFA;
+}
+
+main.red-white .icons-social a {
+	color: #FAFAFA;
+}
+
+main.red-white .icons-social a svg path {
+	fill: #FAFAFA;
+}
+
+main.white-blue {
+	background: #FAFAFA;
+	color: #0277BD;
+}
+
+main.white-blue .icons-social a {
+	color: #0277BD;
+}
+
+main.white-blue .icons-social a svg path {
+	fill: #0277BD;
+}
+
+main.white-gray {
+	background: #EDEDED;
+	color: #4B5658;
+}
+
+main.white-gray .icons-social a {
+	color: #4B5658;
+}
+
+main.white-gray .icons-social a svg path {
+	fill: #4B5658;
+}
+
+main.white-indigo {
+	background: #E8EAF6;
+	color: #303F9F;
+}
+
+main.white-indigo .icons-social a {
+	color: #303F9F;
+}
+
+main.white-indigo .icons-social a svg path {
+	fill: #303F9F;
+}
+
+main.white-red {
+	background: #EDEDED;
+	color: #AF3D4E;
+}
+
+main.white-red .icons-social a {
+	color: #AF3D4E;
+}
+
+main.white-red .icons-social a svg path {
+	fill: #AF3D4E;
+}
+
+main.yellow-black {
+	background: #FFEB3B;
+	color: #1E1E1E;
+}
+
+main.yellow-black .icons-social a {
+	color: #1E1E1E;
+}
+
+main.yellow-black .icons-social a svg path {
+	fill: #1E1E1E;
+}
+
+main.black-yellow {
+	background: #1E1E1E;
+	color: #FFEB3E;
+}
+
+main.black-yellow .icons-social a {
+	color: #FFEB3E;
+}
+
+main.black-yellow .icons-social a svg path {
+	fill: #FFEB3E;
+}
+
+main.black-orange {
+	background: #1E1E1E;
+	color: #FF6600;
+}
+
+main.black-orange .icons-social a {
+	color: #FF6600;
+}
+
+main.black-orange .icons-social a svg path {
+	fill: #FF6600;
+}
+
+main.orange-black {
+	background: #FF6600;
+	color: #1E1E1E;
+}
+
+main.orange-black .icons-social a {
+	color: #1E1E1E;
+}
+
+main.orange-black .icons-social a svg path {
+	fill: #1E1E1E;
 }
