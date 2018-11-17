@@ -1,11 +1,16 @@
 /* Typography */
 
 .disable-select {
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+	/* supported by Chrome and Opera */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
 }
 
 html {
@@ -61,6 +66,17 @@ main>.tagline {
 	font-size: 1.5rem;
 	margin: 1.5rem 0;
 	font-weight: 100;
+
+}
+
+/* .instruction {
+	font-weight: 300;
+} */
+
+hr {
+	width: 60%;
+	border-top: 1px solid;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .icons-social i {
