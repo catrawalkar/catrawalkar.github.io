@@ -19,11 +19,6 @@ const themes = [{
         color: '#3dc0b0',
     },
     {
-        name: 'green',
-        background: '#5BA150',
-        color: '#FAFAFA',
-    },
-    {
         name: 'brown',
         background: '#A26836',
         color: '#FAFAFA',
