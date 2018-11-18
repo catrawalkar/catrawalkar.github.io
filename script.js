@@ -1,154 +1,138 @@
 const themes = [{
         name: 'blue',
-        firstTime: true,
-        colorPrimary: '#4ea9da',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#daedf7',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#4ea9da',
+        color: '#FAFAFA',
     },
     {
         name: 'cyan',
-        firstTime: true,
-        colorPrimary: '#3dc0b0',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#d7f2ef',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#3dc0b0',
+        color: '#FAFAFA',
     },
     {
         name: 'blue-alt',
-        colorPrimary: '#FAFAFA',
-        colorAlternate: '#4ea9da',
-        colorHighlight: '#2a93cb',
-        textPrimary: '#FAFAFA',
-        navAlpha: 'rgba(78, 169, 218, 0.75)'
+        background: '#FAFAFA',
+        color: '#4ea9da',
     },
     {
         name: 'cyan-alt',
-        colorPrimary: '#FAFAFA',
-        colorAlternate: '#3dc0b0',
-        colorHighlight: '#35a698',
-        textPrimary: '#FAFAFA',
-        navAlpha: 'rgba(61, 192, 176, 0.75)'
+        background: '#FAFAFA',
+        color: '#3dc0b0',
     },
     {
         name: 'green',
-        colorPrimary: '#5BA150',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#e1efdf',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#5BA150',
+        color: '#FAFAFA',
     },
     {
         name: 'brown',
-        colorPrimary: '#A26836',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#f5ebe2',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#A26836',
+        color: '#FAFAFA',
     },
     {
         name: 'orange',
-        colorPrimary: '#e17421',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#f9e4d5',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#e17421',
+        color: '#FAFAFA',
     },
     {
         name: 'crimson-red',
-        colorPrimary: '#e64f52',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#fbe4e4',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#e64f52',
+        color: '#FAFAFA',
     },
     {
         name: 'red',
-        colorPrimary: '#af3d4e',
-        colorAlternate: '#FAFAFA',
-        colorHighlight: '#f6e4e7',
-        textPrimary: '#202121',
-        navAlpha: 'rgba(250, 250, 250, 0.75)'
+        background: '#af3d4e',
+        color: '#FAFAFA',
     },
     {
         name: 'red-alt',
-        colorPrimary: '#FFFFFF',
-        colorAlternate: '#89303d',
-        colorHighlight: '#63232c',
-        textPrimary: '#FFFFFF',
-        navAlpha: 'rgba(137, 48, 61, 0.75)'
+        background: '#FFFFFF',
+        color: '#89303d',
     },
     {
         name: 'indigo-alt',
-        colorPrimary: '#FAFAFA',
-        colorAlternate: '#303F9F',
-        colorHighlight: '#242f78',
-        textPrimary: '#FAFAFA',
-        navAlpha: 'rgba(48, 63, 159, 0.75)'
+        background: '#FAFAFA',
+        color: '#303F9F',
     },
     {
-        name: 'grey-alt',
-        colorPrimary: '#FFFFFF',
-        colorAlternate: '#485564',
-        colorHighlight: '#333c46',
-        textPrimary: '#FFFFFF',
-        navAlpha: 'rgba(72, 85, 100, 0.75)'
+        name: 'gray-alt',
+        background: '#FFFFFF',
+        color: '#485564',
     },
     {
         name: 'material-cyan',
-        colorPrimary: '#00BCD4',
-        colorAlternate: '#FFFFFF',
-        colorHighlight: '#d4faff',
-        textPrimary: '#212121',
-        navAlpha: 'rgba(255, 255, 255, 0.75)'
+        background: '#00BCD4',
+        color: '#FFFFFF',
     },
     {
         name: 'material-brown',
-        colorPrimary: '#845c4e',
-        colorAlternate: '#FFFFFF',
-        colorHighlight: '#eee6e3',
-        textPrimary: '#212121',
-        navAlpha: 'rgba(255, 255, 255, 0.75)'
+        background: '#845c4e',
+        color: '#FFFFFF',
     },
     {
-        name: 'material-grey',
-        firstTime: true,
-        colorPrimary: '#607D8B',
-        colorAlternate: '#FFFFFF',
-        colorHighlight: '#dfe6e9',
-        textPrimary: '#212121',
-        navAlpha: 'rgba(255, 255, 255, 0.75)'
+        name: 'material-gray',
+        background: '#607D8B',
+        color: '#FFFFFF',
     },
     {
-        name: 'material-grey-alt',
-        colorPrimary: '#FFFFFF',
-        colorAlternate: '#455A64',
-        colorHighlight: '#374850',
-        textPrimary: '#FAFAFA',
-        navAlpha: 'rgba(69, 90, 100, 0.75)'
+        name: 'material-gray-alt',
+        background: '#FFFFFF',
+        color: '#455A64',
+    },
+    {
+        name: 'gray-white',
+        background: '#485564',
+        color: '#FAFAFA',
+    },
+    {
+        name: 'indigo-white',
+        background: '#303F9F',
+        color: '#FAFAFA',
+    },
+    {
+        name: 'white-blue',
+        background: '#FAFAFA',
+        color: '#0277BD',
+    },
+
+    {
+        name: 'yellow-black',
+        background: '#FFEB3B',
+        color: '#1E1E1E',
+    },
+    {
+        name: 'black-yellow',
+        background: '#1E1E1E',
+        color: '#FFEB3B',
+    },
+    {
+        name: 'black-orange',
+        background: '#1E1E1E',
+        color: '#FF6600',
+    },
+    {
+        name: 'orange-black',
+        background: '#FF6600',
+        color: '#1E1E1E',
     }
 ];
-const randClassName = [
-    'gray-white',
-    'green-white',
-    'indigo-white',
-    'red-white',
-    'white-blue',
-    'white-gray',
-    'white-indigo',
-    'yellow-black',
-    'black-yellow',
-    'orange-black',
-    'black-orange'
-];
+
 $(document).ready(function () {
-    var randomNumber = Math.floor(Math.random() * randClassName.length);
-    $("main").addClass(randClassName[randomNumber]);
+    paintTheme();
     $("body").click(function () {
-        $("main").removeClass();
-        var randomNumber = Math.floor(Math.random() * randClassName.length);
-        $("main").addClass(randClassName[randomNumber]);
+        paintTheme();
     });
 });
+
+function paintTheme() {
+    var randomNumber = Math.floor(Math.random() * themes.length);
+    $("main").css({
+        "background": themes[randomNumber].background,
+        "color": themes[randomNumber].color
+    });
+    $("main .icons-social a").css({
+        "color": themes[randomNumber].color
+    });
+    $("main .icons-social a svg path").css({
+        "fill": themes[randomNumber].color
+    });
+}
