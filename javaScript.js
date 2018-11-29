@@ -5,27 +5,31 @@ $(document).ready(function () {
         title: details,
         html: true
     });
-    $(".tooltipEl").hover(function () {
-        $(this).css({
-            "fill": "red"
-        });
-    }, function () {
-        $(this).css({
-            "fill": "#FFFFFF"
-        });
-    });
-
-    // $(".tooltipE1").mouseover(function () {
+    // $(".tooltipEl").hover(function () {
     //     $(this).css({
     //         "fill": "red"
     //     });
-    // }).mouseout(function () {
+    // }, function () {
     //     $(this).css({
-    //         "fill": "red"
+    //         "fill": "#FFFFFF"
     //     });
     // });
+    data.forEach(function (one) {
+        if (one.winner_party_2013 == "BJP") {
+            $("#" + one.id).css({
+                "fill": "#FF9800"
+            });
+        } else if (one.winner_party_2013 == "INC") {
+            $("#" + one.id).css({
+                "fill": "#7EC0EE"
+            });
+        } else {
+            $("#" + one.id).css({
+                "fill": "#4CAF50"
+            });
+        }
+    });
 });
-
 
 
 function details() {
