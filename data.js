@@ -195,6 +195,7 @@ var data = [{
     "runnerup_vote_2013": "36006"
   },
   {
+    "id": "polygon11834",
     "constituency_no": "15",
     "constituency_name": "Gwalior",
     "reservation": "None",
@@ -208,6 +209,7 @@ var data = [{
     "runnerup_vote_2013": "59208"
   },
   {
+    "id": "path11542",
     "constituency_no": "16",
     "constituency_name": "Gwalior East",
     "reservation": "None",
@@ -221,6 +223,7 @@ var data = [{
     "runnerup_vote_2013": "58677"
   },
   {
+    "id": "path11544",
     "constituency_no": "17",
     "constituency_name": "Gwalior South",
     "reservation": "None",
@@ -542,6 +545,7 @@ var data = [{
     "runnerup_vote_2013": "50134"
   },
   {
+    "id": "path11692",
     "constituency_no": "40",
     "constituency_name": "Naryoli",
     "reservation": "SC",
@@ -625,6 +629,7 @@ var data = [{
     "runnerup_vote_2013": "42520"
   },
   {
+    "id": "path11408",
     "constituency_no": "46",
     "constituency_name": "Niwari",
     "reservation": "None",
@@ -1338,6 +1343,7 @@ var data = [{
     "runnerup_vote_2013": "61677"
   },
   {
+    "id": "path11716",
     "constituency_no": "97",
     "constituency_name": "Jabalpur Purba",
     "reservation": "SC",
@@ -1351,6 +1357,7 @@ var data = [{
     "runnerup_vote_2013": "66012"
   },
   {
+    "id": "path11442",
     "constituency_no": "98",
     "constituency_name": "Jabalpur Uttar",
     "reservation": "None",
@@ -1364,6 +1371,7 @@ var data = [{
     "runnerup_vote_2013": "41093"
   },
   {
+    "id": "path11440",
     "constituency_no": "99",
     "constituency_name": "Jabalpur Cantonment",
     "reservation": "None",
@@ -1377,6 +1385,7 @@ var data = [{
     "runnerup_vote_2013": "29935"
   },
   {
+    "id": "path11444",
     "constituency_no": "100",
     "constituency_name": "Jabalpur Paschim",
     "reservation": "None",
@@ -1390,6 +1399,7 @@ var data = [{
     "runnerup_vote_2013": "61745"
   },
   {
+    "id": "path11406",
     "constituency_no": "101",
     "constituency_name": "Panagar",
     "reservation": "None",
@@ -1991,6 +2001,7 @@ var data = [{
     "runnerup_vote_2013": "51848"
   },
   {
+    "id": "path11470",
     "constituency_no": "144",
     "constituency_name": "Vidisha",
     "reservation": "None",
@@ -2074,6 +2085,7 @@ var data = [{
     "runnerup_vote_2013": "47353"
   },
   {
+    "id": "path11480",
     "constituency_no": "150",
     "constituency_name": "Bhopal Uttar",
     "reservation": "None",
@@ -2087,6 +2099,7 @@ var data = [{
     "runnerup_vote_2013": "66406"
   },
   {
+    "id": "path11482",
     "constituency_no": "151",
     "constituency_name": "Narela",
     "reservation": "None",
@@ -2100,6 +2113,7 @@ var data = [{
     "runnerup_vote_2013": "71502"
   },
   {
+    "id": "path11484",
     "constituency_no": "152",
     "constituency_name": "Bhopal Dakshin-Paschim",
     "reservation": "None",
@@ -2113,6 +2127,7 @@ var data = [{
     "runnerup_vote_2013": "52969"
   },
   {
+    "id": "path11486",
     "constituency_no": "153",
     "constituency_name": "Bhopal Madhya",
     "reservation": "None",
@@ -2126,6 +2141,7 @@ var data = [{
     "runnerup_vote_2013": "63715"
   },
   {
+    "id": "path11488",
     "constituency_no": "154",
     "constituency_name": "Govindpura",
     "reservation": "None",
@@ -2139,6 +2155,7 @@ var data = [{
     "runnerup_vote_2013": "45942"
   },
   {
+    "id": "path11490",
     "constituency_no": "155",
     "constituency_name": "Huzur",
     "reservation": "None",
@@ -2824,6 +2841,7 @@ var data = [{
     "runnerup_vote_2013": "63067"
   },
   {
+    "id": "polygon11630",
     "constituency_no": "204",
     "constituency_name": "Indore-1",
     "reservation": "None",
@@ -2837,6 +2855,7 @@ var data = [{
     "runnerup_vote_2013": "45382"
   },
   {
+    "id": "path11354",
     "constituency_no": "205",
     "constituency_name": "Indore-2",
     "reservation": "None",
@@ -2850,6 +2869,7 @@ var data = [{
     "runnerup_vote_2013": "42652"
   },
   {
+    "id": "path11348",
     "constituency_no": "206",
     "constituency_name": "Indore-3",
     "reservation": "None",
@@ -2863,6 +2883,7 @@ var data = [{
     "runnerup_vote_2013": "55016"
   },
   {
+    "id": "path11352",
     "constituency_no": "207",
     "constituency_name": "Indore-4",
     "reservation": "None",
@@ -2876,6 +2897,7 @@ var data = [{
     "runnerup_vote_2013": "58175"
   },
   {
+    "id": "path11350",
     "constituency_no": "208",
     "constituency_name": "Indore-5",
     "reservation": "None",
@@ -2987,6 +3009,7 @@ var data = [{
     "runnerup_vote_2013": "56723"
   },
   {
+    "id": "path11646",
     "constituency_no": "216",
     "constituency_name": "Ujjain Uttar",
     "reservation": "None",
@@ -3000,6 +3023,7 @@ var data = [{
     "runnerup_vote_2013": "47966"
   },
   {
+    "id": "path11556",
     "constituency_no": "217",
     "constituency_name": "Ujjain Dakshin",
     "reservation": "None",
@@ -3027,6 +3051,7 @@ var data = [{
     "runnerup_vote_2013": "45544"
   },
   {
+    "id": "path11744",
     "constituency_no": "219",
     "constituency_name": "Ratlam Rural",
     "reservation": "ST",
@@ -6022,6 +6047,7 @@ var data = [{
     "runnerup_vote_2013": "63067"
   },
   {
+    "id": "path11356",
     "constituency_no": "204",
     "constituency_name": "Indore-1",
     "reservation": "None",
