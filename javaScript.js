@@ -37,6 +37,7 @@ function details() {
             <div class="card" style="width: 12rem;">\
                 <div class="card-body">\
                     <h4 class="card-title" style="color: white">' + one.constituency_name + '</h4>\
+                    <h6 class="card-subtitle mb-2 text-muted" style="color: white">Reservation: ' + one.reservation + '</h6>\
                     <h6 class="card-subtitle mb-2 text-muted" style="color: white">Winning Party: ' + one.winner_party_2013 + '</h6>\
                 </div>\
             </div>\
