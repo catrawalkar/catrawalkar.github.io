@@ -1,3 +1,3 @@
 # Dev Landing Page
 
-Visit: catrawalkar.github.io
+Visit: http://www.catrawalkar.github.io
