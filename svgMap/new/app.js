@@ -43,6 +43,10 @@
 
 // });
 
+var tooltip = d3.select('#svg')
+    .append('div')
+    .classed('tooltip', true);
+
 
 d3.queue()
     .defer(d3.json, './india_2000-2014_state.json')
@@ -55,13 +59,13 @@ d3.queue()
     .await(function (error, mapData, constituencyData) {
         if (error) throw error;
 
-        
+
         constituencyData.forEach(row => {
             var states = mapData.features.filter(d => d.properties.st_nm === row.state);
             states.forEach(state => state.properties = row);
         });
 
-        
+
 
         var width = 600;
         var height = 600;
@@ -89,7 +93,19 @@ d3.queue()
             .enter()
             .append("path")
             .classed("state", true)
-            .attr("d", path);
+            .attr("d", path)
+            .attr("fill", "none")
+            .on("mousemove", function (d) {
+                tooltip
+                    .style("opacity", 1)
+                    .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
+                    .style("top", (d3.event.y + 30) + "px")
+                    .text(d.properties.state);
+            })
+            .on("mouseout", function () {
+                tooltip
+                    .style("opacity", 0);
+            });
 
         var select = d3.select('select');
 
@@ -98,9 +114,9 @@ d3.queue()
         // setColor(select.property("value"));  
 
         function setColor(val) {
-            
+
             var colorRanges = {
-                constituencies: ["white", "purple "]
+                constituencies: ["#ffb3ff", "#1a001a"]
             }
 
             var scale = d3.scaleLinear()
@@ -117,10 +133,10 @@ d3.queue()
                     var data = d.properties[val];
                     return data ? scale(data) : "#f00";
                 });
-                // .attr("fill", function (d) {
-                //     var data = d.properties[val];
-                //     return data ? scale(data) : "#f00";
-                // });
+            // .attr("fill", function (d) {
+            //     var data = d.properties[val];
+            //     return data ? scale(data) : "#f00";
+            // });
         }
 
 
