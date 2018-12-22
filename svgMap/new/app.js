@@ -127,17 +127,16 @@ d3.queue()
 
             selectStates
                 .transition()
-                .duration(7500)
+                .duration(2000)
+                // .delay(2)
                 .ease(d3.easeBackIn)
                 .attr("fill", d => {
                     var data = d.properties[val];
                     return data ? scale(data) : "#f00";
                 });
-            // .attr("fill", function (d) {
-            //     var data = d.properties[val];
-            //     return data ? scale(data) : "#f00";
-            // });
         }
-
-
     });
+
+$('svg').on('load', (function () {
+    $('#loader').hide();
+}));
