@@ -34,7 +34,7 @@
 </head>
 
 <body>
-  <!-- Following Menu -->
+  <!-- Following Menu
   <div class="ui large top fixed hidden menu">
     <div class="ui container">
       <a class="active item">Home</a> <a class="item">Work</a>
@@ -44,7 +44,7 @@
         <div class="item"><a class="ui primary button">Sign Up</a></div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
@@ -80,24 +80,19 @@
     <div class="ui vertical stripe segment">
       <div class="ui middle aligned stackable grid container">
         <div class="row">
-          <div class="ten wide column">
-            <div id="svg">
-              <div style="border: 1px solid">
-                <div class="ui active dimmer" id="loader">
-                  <div class="ui indeterminate text loader">Loading Map</div>
-                </div>
-                <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
+          <div class="nine wide column">
+            <div id="svg" style="position: relative" class="ui raised segment">
+              <a class="ui olive ribbon label"><i class="map outline icon"></i>India Map</a>
+              <div class="ui active dimmer" id="loader">
+                <div class="ui indeterminate text loader">Loading Map</div>
               </div>
+              <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
           </div>
           <div class="six wide right floated column">
             <select class="ui dropdown">
-              <option value="">Parameter</option>
               <option value="constituencies">Constituency</option>
-              <!-- <option value="0">Female</option> -->
             </select>
-
-            <!-- <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image"> -->
           </div>
         </div>
         <div class="row">
