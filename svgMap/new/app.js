@@ -188,7 +188,9 @@ function openStateMap(d) {
             }
         })
         .await(function (error, mapData, constituencyData) {
-            if (error) throw error;
+            if (error) {
+                console.log(error)
+            }
 
             d3.select('.stateMap')
                 .append('a')
