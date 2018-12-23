@@ -47,13 +47,14 @@ var tooltip = d3.select('#svg')
     .append('div')
     .classed('tooltip', true)
     .classed('ui', true)
-    .classed('continer', true);
+    .classed('continer', true)
+    .style("z-index", "10");
 // .classed('segment', true);
 
 
 d3.queue()
-    .defer(d3.json, './india_state.json')
-    .defer(d3.csv, './Book1.csv', function (row) {
+    .defer(d3.json, './india.json')
+    .defer(d3.csv, './india.csv', function (row) {
         return {
             state: row.Name_of_State,
             constituencies: +row.No_of_Constituencies
@@ -99,9 +100,17 @@ d3.queue()
             .attr("d", path)
             .attr("fill", "none")
             .on("mousemove", showTooltip)
-            .on("touchstart", showTooltip)
+            .on("mouseover", function (d) {
+                d3.select(this)
+                    .classed("mouseover", true);
+            })
+            .on("mouseleave", function (d) {
+                d3.select(this)
+                    .classed("mouseover", false);
+            })
+            // .on("touchstart", showTooltip)
             .on("mouseout", hideTooltip)
-            .on("touchend", hideTooltip)
+            // .on("touchend", hideTooltip)
             .on("dblclick", openStateMap);
 
         var select = d3.select('select');
@@ -139,11 +148,16 @@ $('svg').on('load', (function () {
 }));
 
 function showTooltip(d) {
+
     tooltip
         .style("opacity", 1)
         .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
         .style("top", (d3.event.y + 30) + "px")
-        .text(d.properties.state);
+        .html(`
+        <p>${d.properties.state}</p>
+        <p>${d.properties.constituencies}</p>
+        `);
+    // .text(d.properties.state);
 }
 
 function hideTooltip() {
@@ -166,8 +180,8 @@ function openStateMap(d) {
         .style("position", "absolute")
         .style("top", "0px");
     d3.queue()
-        .defer(d3.json, './' + d.properties.state + '.json')
-        .defer(d3.csv, './' + d.properties.state + '.csv', function (row) {
+        .defer(d3.json, './stateData/' + d.properties.state + '_PC.json')
+        .defer(d3.csv, './india.csv', function (row) {
             return {
                 state: row.Name_of_State,
                 constituencies: +row.No_of_Constituencies
@@ -177,21 +191,23 @@ function openStateMap(d) {
             if (error) throw error;
 
             d3.select('.stateMap')
-            .append('a') 
-            .classed('stateMapRibbon', true)
-            .classed('ui', true)
-            .classed('blue', true)
-            .classed('ribbon', true)
-            .classed('label', true)
-            .select(".stateMapRibbon")
-            
-            <a class="ui olive ribbon label"><i class="map outline icon"></i>India Map</a>
+                .append('a')
+                .classed('stateMapRibbon', true)
+                .classed('ui', true)
+                .classed('blue', true)
+                .classed('right', true)
+                .classed('ribbon', true)
+                .classed('label', true);
 
-
-            constituencyData.forEach(row => {
-                var states = mapData.features.filter(d => d.properties.st_nm === row.state);
-                states.forEach(state => state.properties = row);
-            });
+            d3.select(".stateMapRibbon")
+                .html(`
+            <i class="map outline icon"></i>${d.properties.state} Map
+            `)
+            debugger
+            // constituencyData.forEach(row => {
+            //     var states = mapData.features.filter(d => d.properties.st_nm === row.state);
+            //     states.forEach(state => state.properties = row);
+            // });
 
 
 
@@ -206,11 +222,9 @@ function openStateMap(d) {
 
             var scale = .95 / Math.max((bounds[1][0] - bounds[0][0]) / width,
                 (bounds[1][1] - bounds[0][1]) / height);
-            // var scale = 125;
             var transl = [(width - scale * (bounds[1][0] + bounds[0][0])) / 2,
                 (height - scale * (bounds[1][1] + bounds[0][1])) / 2
             ];
-            // var transl = [width / 2, height / 1.4];
             projection.scale(scale).translate(transl);
 
             d3.select('.stateMap')
@@ -227,12 +241,37 @@ function openStateMap(d) {
                 .classed("districts", true)
                 .attr("d", path)
                 .attr("fill", "none")
-                .on("mousemove", showTooltip)
-                .on("touchstart", showTooltip)
-                .on("mouseout", hideTooltip)
-                .on("touchend", hideTooltip);
+                .on("mousemove", function (d) {
+                    tooltip
+                        .style("opacity", 1)
+                        .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
+                        .style("top", (d3.event.y + 30) + "px")
+                        .html(`
+                        <p>${d.properties.PC_NAME}</p>
+                        <p>${d.properties.PARTY}</p>
+                        `);
+                    // .text(d.properties.state);
+                })
+                .on("mouseover", function (d) {
+                    d3.select(this)
+                        .classed("mouseover", true);
+                })
+                .on("mouseleave", function (d) {
+                    d3.select(this)
+                        .classed("mouseover", false);
+                })
+                // .on("touchstart", showTooltip)
+                .on("mouseout", function () {
+                    tooltip
+                        .style("opacity", 0);
+                })
+            // .on("touchend", hideTooltip);
 
-//      CODE FOR REMOVING THE ELEMENT
+
+
+
+
+            //      CODE FOR REMOVING THE ELEMENT
             var stateMap = d3.select(".stateMap");
             var stateMapWithContent = d3.selectAll(".stateMap, .stateMap *");
 
@@ -248,23 +287,23 @@ function openStateMap(d) {
                     }
                 })
 
-            var select = d3.select('select');
+            // var select = d3.select('select');
 
-            select.on("change", d => setColor(d3.event.target.value));
+            // select.on("change", d => setColor(d3.event.target.value));
 
-            setColor(select.property("value"));
+            setColor("PARTY");
 
             function setColor(val) {
 
-                var colorRanges = {
-                    constituencies: ["#ffb3ff", "#1a001a"]
-                }
+                // var colorRanges = {
+                //     constituencies: ["#ffb3ff", "#1a001a"]
+                // }
 
-                var scale = d3.scaleLinear()
-                    .domain([0, d3.max(constituencyData, d => d[val])])
-                    .range(colorRanges[val]);
+                // var scale = d3.scaleLinear()
+                //     .domain([0, d3.max(constituencyData, d => d[val])])
+                //     .range(colorRanges[val]);
 
-                var selectStates = d3.selectAll(".state");
+                var selectStates = d3.selectAll(".districts");
 
                 selectStates
                     .transition()
@@ -272,8 +311,10 @@ function openStateMap(d) {
                     // .delay(2)
                     .ease(d3.easeBackIn)
                     .attr("fill", d => {
-                        var data = d.properties[val];
-                        return data ? scale(data) : "#f00";
+                        // var data = d.properties[val];
+                        // return data ? scale(data) : "#f00";
+                        console.log(d);
+                        return d.properties.PARTY.includes("INC") ? "green" : "orange"
                     });
             }
         });

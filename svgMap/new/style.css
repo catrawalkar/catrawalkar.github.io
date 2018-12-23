@@ -131,6 +131,10 @@ path {
     /* Internet Explorer/Edge */
 }
 
+.tooltip p {
+    margin: 0;
+}
+
 .ribbon {
     user-select: none;
     /* supported by Chrome and Opera */
@@ -168,3 +172,10 @@ path {
     position: absolute;
     top: 100%;
 } */
+
+.mouseover {
+    /* fill: red; */
+    /* -webkit-filter: drop-shadow(-5px -5px 5px #000); */
+    stroke-width: 2px;
+    stroke: rgb(34, 34, 34)
+}
