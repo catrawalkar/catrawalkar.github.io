@@ -200,7 +200,7 @@ function openStateMap(d) {
                 .classed('right', true)
                 .classed('ribbon', true)
                 .classed('label', true);
-
+ 
             d3.select(".stateMapRibbon")
                 .html(`
             <i class="map outline icon"></i>${d.properties.state} Map
