@@ -180,7 +180,7 @@ function openStateMap(d) {
         .style("position", "absolute")
         .style("top", "0px");
     d3.queue()
-        .defer(d3.json, './stateData/' + d.properties.state + '_PC.json')
+        .defer(d3.json, './' + d.properties.state + '_PC.json')
         .defer(d3.csv, './india.csv', function (row) {
             return {
                 state: row.Name_of_State,
