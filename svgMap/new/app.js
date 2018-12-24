@@ -180,7 +180,7 @@ function openStateMap(d) {
         .style("position", "absolute")
         .style("top", "0px");
     d3.queue()
-        .defer(d3.json, './' + d.properties.state + '_PC.json')
+        .defer(d3.json, './stateData' + d.properties.state + '_PC.json')
         .defer(d3.csv, './india.csv', function (row) {
             return {
                 state: row.Name_of_State,
@@ -205,7 +205,7 @@ function openStateMap(d) {
                 .html(`
             <i class="map outline icon"></i>${d.properties.state} Map
             `)
-            debugger
+            
             // constituencyData.forEach(row => {
             //     var states = mapData.features.filter(d => d.properties.st_nm === row.state);
             //     states.forEach(state => state.properties = row);
