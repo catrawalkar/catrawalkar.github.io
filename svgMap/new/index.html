@@ -14,6 +14,7 @@
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
   <script>
     $(document).ready(function () {
       // fix menu when passed
@@ -29,6 +30,15 @@
 
       // create sidebar and attach to menu open
       $(".ui.sidebar").sidebar("attach events", ".toc.item");
+      $('.ui.vertical.fluid.tabular.menu')
+        .on('click', '.item', function () {
+          if (!$(this).hasClass('dropdown')) {
+            $(this)
+              .addClass('active')
+              .siblings('.item')
+              .removeClass('active');
+          }
+        });
     });
   </script>
 </head>
@@ -89,10 +99,47 @@
               <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
           </div>
-          <div class="six wide right floated column">
-            <select class="ui dropdown">
-              <option value="constituencies">Constituency</option>
-            </select>
+          <div class="seven wide column">
+            <div id="pi" style="position: relative; width: 570px; height: 275px;" class="ui raised segment">
+              <a class="ui olive ribbon label"><i class="map outline icon"></i>Pi Chart</a>
+              <!-- <div class="ui active dimmer" id="loader">
+                <div class="ui indeterminate text loader">Loading Map</div>
+              </div> -->
+              <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
+            </div>
+            <div style="position: relative; width: 570px; height: 275px;" class="ui segments">
+              <div class="ui secondary segment">
+                <p>Secondary Content</p>
+              </div>
+              <div class="ui segment">
+                <div class="ui grid">
+                  <div class="four wide column">
+                    <div class="ui vertical fluid tabular menu">
+                      <a class="active item">
+                        Bio
+                      </a>
+                      <a class="item">
+                        Pics
+                      </a>
+                      <a class="item">
+                        Companies
+                      </a>
+                      <a class="item">
+                        Links
+                      </a>
+                    </div>
+                  </div>
+                  <div class="twelve wide stretched column">
+                    <div class="ui segment" id="options">
+                      <select class="ui dropdown">
+                        <option value="constituencies">Constituency</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
         <div class="row">
@@ -177,6 +224,10 @@
       </div>
     </div>
   </div>
+
+  <script>
+
+  </script>
 
   <script src="https://d3js.org/d3.v4.js"></script>
   <script src="app.js"></script>
