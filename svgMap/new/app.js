@@ -18,7 +18,8 @@ d3.queue()
 
 
         constituencyData.forEach(row => {
-            var states = mapData.features.filter(d => d.properties.st_nm === row.state);
+
+            var states = mapData.features.filter(d => d.properties.ST_NM === row.state);
             states.forEach(state => state.properties = row);
         });
 
@@ -131,11 +132,12 @@ function openStateMap(d) {
         .style("position", "absolute")
         .style("top", "0px");
     d3.queue()
-        .defer(d3.json, './stateData/' + d.properties.state + '.json')
-        .defer(d3.csv, './india.csv', function (row) {
+        .defer(d3.json, './assets/json/' + d.properties.state + '.json')
+        .defer(d3.csv, './assets/csv/Election 2014.csv', function (row) {
             return {
-                state: row.Name_of_State,
-                constituencies: +row.No_of_Constituencies
+                constituency: row.Constituency,
+                winner: row.Winner,
+                winner_party: row.WinnerParty
             }
         })
         .await(function (error, mapData, constituencyData) {
@@ -157,11 +159,14 @@ function openStateMap(d) {
             <i class="map outline icon"></i>${d.properties.state} Map
             `)
 
-            // constituencyData.forEach(row => {
-            //     var states = mapData.features.filter(d => d.properties.st_nm === row.state);
-            //     states.forEach(state => state.properties = row);
-            // });
-
+            constituencyData.forEach(row => {
+                var states = mapData.features.filter(d => {
+                    debugger;
+                    d.properties.st_nm === row.state
+                });
+                states.forEach(state => state.properties = row);
+            });
+            debugger;
 
 
             var width = 400;
