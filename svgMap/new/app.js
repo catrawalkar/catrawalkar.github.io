@@ -6,8 +6,8 @@ var tooltip = d3.select('#svg')
     .style("z-index", "10");
 
 d3.queue()
-    .defer(d3.json, './india.json')
-    .defer(d3.csv, './india.csv', function (row) {
+    .defer(d3.json, './assets/json/India.json')
+    .defer(d3.csv, './assets/csv/India.csv', function (row) {
         return {
             state: row.Name_of_State,
             constituencies: +row.No_of_Constituencies
