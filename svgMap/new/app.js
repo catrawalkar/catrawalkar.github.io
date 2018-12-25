@@ -10,7 +10,9 @@ d3.queue()
     .defer(d3.csv, './assets/csv/India.csv', function (row) {
         return {
             state: row.Name_of_State,
-            constituencies: +row.No_of_Constituencies
+            constituencies: +row.No_of_Constituencies,
+            sc: +row.SC_Reservation,
+            st: +row.ST_Reservation
         }
     })
     .await(function (error, mapData, constituencyData) {
@@ -107,7 +109,9 @@ function showTooltip(d) {
         .style("top", (d3.event.y + 30) + "px")
         .html(`
         <p>${d.properties.state}</p>
-        <p>${d.properties.constituencies}</p>
+        <p>Number of Constituencies: ${d.properties.constituencies}</p>
+        <p>Reservation for SC: ${d.properties.sc}</p>
+        <p>Reservation for ST: ${d.properties.st}</p>
         `);
     // .text(d.properties.state);
 }
@@ -160,11 +164,8 @@ function openStateMap(d) {
             `)
 
             constituencyData.forEach(row => {
-                var states = mapData.features.filter(d => {
-                    debugger;
-                    d.properties.st_nm === row.state
-                });
-                states.forEach(state => state.properties = row);
+                var pcs = mapData.features.filter(d => d.properties.PC_NAME === row.constituency);
+                pcs.forEach(pc => pc.properties = row);
             });
             debugger;
 
@@ -205,8 +206,9 @@ function openStateMap(d) {
                         .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
                         .style("top", (d3.event.y + 30) + "px")
                         .html(`
-                        <p>${d.properties.PC_NAME}</p>
-                        <p>${d.properties.PARTY}</p>
+                        <p>${d.properties.constituency}</p>
+                        <p>${d.properties.winner}</p>
+                        <p>${d.properties.winner_party}</p>
                         `);
                     // .text(d.properties.state);
                 })
@@ -224,11 +226,6 @@ function openStateMap(d) {
                         .style("opacity", 0);
                 })
             // .on("touchend", hideTooltip);
-
-
-
-
-
             //      CODE FOR REMOVING THE ELEMENT
             var stateMap = d3.select(".stateMap");
             var stateMapWithContent = d3.selectAll(".stateMap, .stateMap *");
@@ -272,9 +269,8 @@ function openStateMap(d) {
                         // var data = d.properties[val];
                         // return data ? scale(data) : "#f00";
                         console.log(d);
-                        return d.properties.PARTY.includes("INC") ? "green" : "orange"
+                        return "orange"
                     });
             }
         });
-
 }
