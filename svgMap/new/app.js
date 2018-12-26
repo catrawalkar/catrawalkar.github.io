@@ -167,8 +167,6 @@ function openStateMap(d) {
                 var pcs = mapData.features.filter(d => d.properties.PC_NAME === row.constituency);
                 pcs.forEach(pc => pc.properties = row);
             });
-            debugger;
-
 
             var width = 400;
             var height = 400;
@@ -206,9 +204,9 @@ function openStateMap(d) {
                         .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
                         .style("top", (d3.event.y + 30) + "px")
                         .html(`
-                        <p>${d.properties.constituency}</p>
+                        <h3>${d.properties.constituency}</h3>
+                        <p>Party: ${d.properties.winner_party}</p>
                         <p>${d.properties.winner}</p>
-                        <p>${d.properties.winner_party}</p>
                         `);
                     // .text(d.properties.state);
                 })
@@ -268,8 +266,13 @@ function openStateMap(d) {
                     .attr("fill", d => {
                         // var data = d.properties[val];
                         // return data ? scale(data) : "#f00";
-                        console.log(d);
-                        return "orange"
+                        if (d.properties.winner_party == "Bharatiya Janata Party")
+                            return "orange";
+                        else if (d.properties.winner_party == "Indian National Congress")
+                            return "green";
+                        else {
+                            return "blue";
+                        }
                     });
             }
         });
