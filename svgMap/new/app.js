@@ -108,10 +108,10 @@ function showTooltip(d) {
         .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
         .style("top", (d3.event.y + 30) + "px")
         .html(`
-        <p>${d.properties.state}</p>
-        <p>Number of Constituencies: ${d.properties.constituencies}</p>
-        <p>Reservation for SC: ${d.properties.sc}</p>
-        <p>Reservation for ST: ${d.properties.st}</p>
+        <h3>${d.properties.state}</h3>
+        <p>Constituencies: ${d.properties.constituencies}</p>
+        <p>SC: ${d.properties.sc}</p>
+        <p>ST: ${d.properties.st}</p>
         `);
     // .text(d.properties.state);
 }
