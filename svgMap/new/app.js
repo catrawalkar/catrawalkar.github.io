@@ -46,6 +46,7 @@ d3.queue()
         d3.select('svg')
             .attr("width", width)
             .attr("height", height)
+            .html(`<text x='370' y='30' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Double click on the map to interact)</text>`)
             .selectAll(".state")
             .data(mapData.features)
             .enter()
@@ -156,7 +157,8 @@ function openStateMap(d) {
                 .classed('blue', true)
                 .classed('right', true)
                 .classed('ribbon', true)
-                .classed('label', true);
+                .classed('label', true)
+                .classed('nonselectable', true);
 
             d3.select(".stateMapRibbon")
                 .html(`
@@ -191,6 +193,7 @@ function openStateMap(d) {
             d3.select('.stateSvg')
                 .attr("width", width)
                 .attr("height", height)
+                .html(`<text class='nonselectable' x='300' y='25' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Click outside to return)</text>`)
                 .selectAll(".districts")
                 .data(mapData.features)
                 .enter()

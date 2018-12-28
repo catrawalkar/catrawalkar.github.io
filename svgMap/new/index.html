@@ -13,8 +13,21 @@
   <link rel="stylesheet" type="text/css" href="style.css" />
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/2.0.0/jquery.localScroll.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131476464-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131476464-1');
+  </script>
   <script>
     $(document).ready(function () {
       // fix menu when passed
@@ -39,27 +52,37 @@
               .removeClass('active');
           }
         });
+      $('.menu').localScroll({
+        duration: 700
+      });
     });
   </script>
 </head>
 
 <body>
-  <!-- Following Menu
+  <!-- Following Menu -->
   <div class="ui large top fixed hidden menu">
     <div class="ui container">
-      <a class="active item">Home</a> <a class="item">Work</a>
-      <a class="item">Company</a> <a class="item">Careers</a>
-      <div class="right menu">
-        <div class="item"><a class="ui button">Log in</a></div>
-        <div class="item"><a class="ui primary button">Sign Up</a></div>
+      <a class="active item" href="#">Home</a>
+      <a class="item" href="#content">Map</a>
+      <!-- <a class="item">Company</a> -->
+      <!-- <a class="item">Careers</a> -->
+      <!-- <div class="right menu">
+      <div class="item"><a class="ui button">Log in</a></div>
+      <div class="item"><a class="ui primary button">Sign Up</a></div>
+    </div> -->
+      <div class="right item">
+        <a class="ui primary button">Contact Us</a>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Sidebar Menu -->
   <div class="ui vertical inverted sidebar menu">
-    <a class="active item">Home</a> <a class="item">Work</a>
-    <a class="item">Company</a> <a class="item">Careers</a>
+    <a class="active item" href="#">Home</a>
+    <a class="item" href="#content">Map</a>
+    <!-- <a class="item">Company</a> -->
+    <!-- <a class="item">Careers</a> -->
     <a class="item">Contact Us</a>
   </div>
 
@@ -69,8 +92,10 @@
       <div class="ui container">
         <div class="ui large secondary inverted pointing menu">
           <a class="toc item"> <i class="sidebar icon"></i> </a>
-          <a class="active item">Home</a> <a class="item">Work</a>
-          <a class="item">Company</a> <a class="item">Careers</a>
+          <a class="active item" href="#">Home</a>
+          <a class="item" href="#content">Map</a>
+          <!-- <a class="item">Company</a> -->
+          <!-- <a class="item">Careers</a> -->
           <div class="right item">
             <a class="ui inverted button">Contact Us</a>
           </div>
@@ -78,20 +103,22 @@
       </div>
 
       <div class="ui text container">
-        <h1 class="ui inverted header">Imagine-a-Company</h1>
-        <h2>Do whatever you want when you want to.</h2>
+        <h1 class="ui inverted header">Media Vidya</h1>
+        <h2>Get accurate and thorough insight of the Elections here.</h2>
+        <!-- <a href="#content"> -->
         <div class="ui huge primary button">
           Get Started <i class="right arrow icon"></i>
         </div>
+        <!-- </a> -->
       </div>
     </div>
 
-    <div class="ui vertical stripe segment">
+    <div class="ui vertical stripe segment" id="content">
       <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="nine wide column">
             <div id="svg" style="position: relative; width: 570px; height: 575px;" class="ui raised segment">
-              <a class="ui olive ribbon label"><i class="map outline icon"></i>India Map</a>
+              <a class="ui olive ribbon label nonselectable"><i class="map outline icon"></i>India Map</a>
               <div class="ui active dimmer" id="loader">
                 <div class="ui indeterminate text loader">Loading Map</div>
               </div>
@@ -100,13 +127,13 @@
           </div>
           <div class="seven wide column">
 
-            <div class="ui segments">
+            <div class="ui segments" style="height: 18rem">
               <div class="ui top attached secondary segment">
-                <p>Select Options</p>
+                <p class="nonselectable">Select Options</p>
               </div>
               <div class="ui segment">
                 <div class="ui grid">
-                  <div class="four wide column">
+                  <div class="four wide column" style="padding-right: 0px">
                     <div class="ui vertical fluid tabular menu">
                       <a class="active item" data-tab="info">
                         Informative
@@ -120,9 +147,9 @@
                     </div>
                   </div>
                   <div class="twelve wide stretched column">
-                    <div class="ui segment">
+                    <div class="ui segment center aligned" style="height :11.5rem">
                       <div class="ui active tab" data-tab="info">
-                        <select class="ui selection dropdown">
+                        <select class="ui selection dropdown nonselectable">
                           <option value="constituencies">Constituency</option>
                         </select>
                       </div>
@@ -141,8 +168,8 @@
                 </div>
               </div>
             </div>
-            <div id="pi" style="position: relative; height: 275px;" class="ui raised segment">
-              <a class="ui olive ribbon label"><i class="map outline icon"></i>Chart</a>
+            <div id="chart" style="position: relative; height: 22rem;" class="ui raised segment">
+              <a class="ui olive ribbon label nonselectable"><i class="map outline icon"></i>Chart</a>
               <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
 
@@ -220,6 +247,11 @@
   <script>
     $('.tabular.menu .item').tab();
     $('select').dropdown();
+    $(".ui.huge.primary.button").click(function () {
+      $('html, body').animate({
+        scrollTop: $("#content").offset().top
+      }, 700);
+    });
   </script>
 
   <script src="https://d3js.org/d3.v4.js"></script>

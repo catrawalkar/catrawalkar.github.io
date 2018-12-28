@@ -138,19 +138,6 @@ path {
     margin: 0;
 }
 
-.ribbon {
-    user-select: none;
-    /* supported by Chrome and Opera */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-}
-
 .state {
     cursor: pointer
 }
@@ -181,4 +168,17 @@ path {
     /* -webkit-filter: drop-shadow(-5px -5px 5px #000); */
     stroke-width: 2px;
     stroke: rgb(34, 34, 34)
+}
+
+.nonselectable {
+    user-select: none;
+    /* supported by Chrome and Opera */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
 }
