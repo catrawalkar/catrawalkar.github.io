@@ -274,10 +274,10 @@ function openStateMap(d) {
                             return "orange";
                         else if (d.properties.winner_party == "Indian National Congress")
                             return "green";
-                        else if (d.properties.winner_party == undefined)
-                            return "gray";
+                        else if (d.properties.winner_party == "POK")
+                            return "#929694";
                         else if (d.properties.winner_party == "Vacant")
-                            return "gray";
+                            return "#929694";
                         else if (d.properties.winner_party == "Telugu Desam Party")
                             return "yellow";
                         else if (d.properties.winner_party == "YSR Congress Party")
@@ -322,10 +322,6 @@ function openStateMap(d) {
                             return "#094B02";
                         else if (d.properties.winner_party == "All India Trinamool Congress")
                             return "#00984F";
-                        else if (d.properties.winner_party == "Telangana Rashtra Samithi")
-                            return "#A10079";
-                        else if (d.properties.winner_party == "Telangana Rashtra Samithi")
-                            return "#A10079";
                         else {
                             return "blue";
                         }
