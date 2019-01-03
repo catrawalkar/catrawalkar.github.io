@@ -5,9 +5,9 @@ Vizianagaram,Pusapati Ashok Gajapathi Raju,Telugu Desam Party
 Visakhapatnam,Kambhampati Hari Babu,Bharatiya Janata Party
 Anakapalli,Muttamsetti Srinivasa Rao,Telugu Desam Party
 Kakinada,Thota Narasimham,Telugu Desam Party
-Amalapuram,Pandula Ravindra Babu,Telugu Desam Party
+Amlapuram,Pandula Ravindra Babu,Telugu Desam Party
 Rajahmundry,Murali Mohan Maganti,Telugu Desam Party
-Narasapuram,Gokaraju Ganga Raju,Bharatiya Janata Party
+Narsapuram,Gokaraju Ganga Raju,Bharatiya Janata Party
 Eluru,Maganti Venkateswara Rao,Telugu Desam Party
 Machilipatnam,Konakalla Narayana Rao,Telugu Desam Party
 Vijayawada,Kesineni Srinivas,Telugu Desam Party
@@ -32,17 +32,17 @@ Autonomous District,Biren Sing Engti,Indian National Congress
 Dhubri,Badruddin Ajmal,All India United Democratic Front
 Kokrajhar,Naba Kumar Saranyia,Independent
 Barpeta,Sirajuddin Ajmal,All India United Democratic Front
-Gauhati,Bijoya Chakravarty,Bharatiya Janata Party
+Guwahati,Bijoya Chakravarty,Bharatiya Janata Party
 Mangaldoi,Ramen Deka,Bharatiya Janata Party
 Tezpur,Ram Prasad Sharma,Bharatiya Janata Party
-Nowgong,Rajen Gohain,Bharatiya Janata Party
+Nagaon,Rajen Gohain,Bharatiya Janata Party
 Kaliabor,Gaurav Gogoi,Indian National Congress
 Jorhat,Kamakhya Prasad Tasa,Bharatiya Janata Party
 Dibrugarh,Rameswar Teli,Bharatiya Janata Party
 Lakhimpur,Sarbananda Sonowal (Resigned on 23 May 2016) Pradan Baruah (Elected on 22 November 2016),Bharatiya Janata Party
 Valmiki Nagar,Satish Chandra Dubey,Bharatiya Janata Party
-Paschim Champaran,Sanjay Jaiswal,Bharatiya Janata Party
-Purvi Champaran,Radha Mohan Singh,Bharatiya Janata Party
+Pashchim Champaran,Sanjay Jaiswal,Bharatiya Janata Party
+Purba Champaran,Radha Mohan Singh,Bharatiya Janata Party
 Sheohar,Rama Devi,Bharatiya Janata Party
 Sitamarhi,Ram Kumar Sharma,Rashtriya Lok Samta Party
 Madhubani,Hukmdev Narayan Yadav,Bharatiya Janata Party
@@ -59,9 +59,9 @@ Vaishali,Rama Kishor Singh,Lok Janshakti Party
 Gopalganj,Janak Ram,Bharatiya Janata Party
 Siwan,Om Prakash Yadav,Bharatiya Janata Party
 Maharajganj,Janardan Singh Sigriwal,Bharatiya Janata Party
-Saran,Rajiv Pratap Rudy,Bharatiya Janata Party
+Saran (Chhapra),Rajiv Pratap Rudy,Bharatiya Janata Party
 Hajipur,Ram Vilas Paswan,Lok Janshakti Party
-Ujiarpur,Nityanand Rai,Bharatiya Janata Party
+Ujiapur,Nityanand Rai,Bharatiya Janata Party
 Samastipur,Ram Chandra Paswan,Lok Janshakti Party
 Begusarai,Bhola Singh (Died on 19 October 2018) Vacant,Bharatiya Janata Party
 Khagaria,Mehboob Ali Kaiser,Lok Janshakti Party
@@ -82,7 +82,7 @@ Nawada,Giriraj Singh,Bharatiya Janata Party
 Jamui,Chirag Paswan,Lok Janshakti Party
 Surguja,Kamalbhan Singh Marabi,Bharatiya Janata Party
 Raigarh,Vishnu Deo Sai,Bharatiya Janata Party
-Janjgir,Kamla Devi Patle,Bharatiya Janata Party
+Janjgir-Champa,Kamla Devi Patle,Bharatiya Janata Party
 Korba,Banshilal Mahto,Bharatiya Janata Party
 Bilaspur,Lakhan Lal Sahu,Bharatiya Janata Party
 Rajnandgaon,Abhishek Singh,Bharatiya Janata Party
@@ -529,7 +529,7 @@ Bardhaman�Durgapur,Mamtaz Sanghamita,All India Trinamool Congress
 Asansol,Babul Supriyo,Bharatiya Janata Party
 Bolpur,Anupam Hazra,All India Trinamool Congress
 Birbhum,Satabdi Roy,All India Trinamool Congress
-Andaman and Nicobar Islands,Bishnu Pada Ray,Bharatiya Janata Party
+Andaman & Nicobar Islands,Bishnu Pada Ray,Bharatiya Janata Party
 Chandigarh,Kirron Kher,Bharatiya Janata Party
 Dadra and Nagar Haveli,Natubhai Gomanbhai Patel,Bharatiya Janata Party
 Daman and Diu,Lalubhai Patel,Bharatiya Janata Party
