@@ -94,13 +94,13 @@ Kanker,Vikram Usendi,Bharatiya Janata Party
 North Goa,Shripad Yasso Naik,Bharatiya Janata Party
 South Goa,Narendra Keshav Sawaikar,Bharatiya Janata Party
 Kachchh,Vinodbhai Chavda,Bharatiya Janata Party
-Banaskantha,Haribhai Parthibhai Chaudhary,Bharatiya Janata Party
+Banas Kantha,Haribhai Parthibhai Chaudhary,Bharatiya Janata Party
 Patan,Liladharbhai Khodaji Vaghela,Bharatiya Janata Party
 Mahesana,Jayshreeben Kanubhai Patel,Bharatiya Janata Party
-Sabarkantha,Dipsinh Shankarsinh Rathod,Bharatiya Janata Party
+Sabar Kantha,Dipsinh Shankarsinh Rathod,Bharatiya Janata Party
 Gandhinagar,L. K. Advani,Bharatiya Janata Party
-Ahmedabad East,Paresh Rawal,Bharatiya Janata Party
-Ahmedabad West,Kirit Premjibhai Solanki,Bharatiya Janata Party
+Ahmadabad (East),Paresh Rawal,Bharatiya Janata Party
+Ahmadabad (West),Kirit Premjibhai Solanki,Bharatiya Janata Party
 Surendranagar,Devjibhai Govindbhai Fatepara,Bharatiya Janata Party
 Rajkot,Mohan Kundariya,Bharatiya Janata Party
 Porbandar,Vitthalbhai Hansrajbhai Radadiya,Bharatiya Janata Party
@@ -110,8 +110,8 @@ Amreli,Naranbhai Kachhadia,Bharatiya Janata Party
 Bhavnagar,Bhartiben Shiyal,Bharatiya Janata Party
 Anand,Dilip Patel,Bharatiya Janata Party
 Kheda,Devusinh Jesingbhai Chauhan,Bharatiya Janata Party
-Panchmahal,Prabhatsinh Pratapsinh Chauhan,Bharatiya Janata Party
-Dahod,Jasvantsinh Sumanbhai Bhabhor,Bharatiya Janata Party
+Panch Mahals,Prabhatsinh Pratapsinh Chauhan,Bharatiya Janata Party
+Dohad,Jasvantsinh Sumanbhai Bhabhor,Bharatiya Janata Party
 Vadodara,Narendra Modi (Resigned on 29 May 2014) Ranjanben Bhatt (Elected on 16 September 2014),Bharatiya Janata Party
 Chhota Udaipur,Ramsinh Rathwa,Bharatiya Janata Party
 Bharuch,Mansukhbhai Vasava,Bharatiya Janata Party
@@ -120,23 +120,23 @@ Surat,Darshana Vikram Jardosh,Bharatiya Janata Party
 Navsari,Chandrakant Raghunath Patil,Bharatiya Janata Party
 Valsad,K. C. Patel,Bharatiya Janata Party
 Ambala,Rattan Lal Kataria,Bharatiya Janata Party
-Kurukshetra,Raj Kumar Saini,Bharatiya Janata Party
+Krukshetra,Raj Kumar Saini,Bharatiya Janata Party
 Sirsa,Charanjeet Singh Rori,Indian National Lok Dal
 Hisar,Dushyant Chautala,Indian National Lok Dal
 Karnal,Ashwini Kumar,Bharatiya Janata Party
 Sonipat,Ramesh Chander Kaushik,Bharatiya Janata Party
 Rohtak,Deepender Singh Hooda,Indian National Congress
-Bhiwani�Mahendragarh,Dharambir Singh,Bharatiya Janata Party
+Bhiwani - Mahendragarh,Dharambir Singh,Bharatiya Janata Party
 Gurgaon,Inderjit Singh Rao,Bharatiya Janata Party
 Faridabad,Krishan Pal Gurjar,Bharatiya Janata Party
 Mandi,Ram Swaroop Sharma,Bharatiya Janata Party
 Kangra,Shanta Kumar,Bharatiya Janata Party
 Hamirpur,Anurag Singh Thakur,Bharatiya Janata Party
 Shimla,Virender Kashyap,Bharatiya Janata Party
-Baramulla,Muzaffar Hussain Baig,Jammu and Kashmir Peoples Democratic Party
+Baramula,Muzaffar Hussain Baig,Jammu and Kashmir Peoples Democratic Party
 Srinagar,Tariq Hameed Karra (Resigned on 17 October 2016) Farooq Abdullah (Elected on 15 April 2017),Jammu and Kashmir Peoples Democratic Party
 Anantnag,Mehbooba Mufti (Resigned on 4 July 2016) Vacant,Jammu and Kashmir Peoples Democratic Party
-Ladakh,Thupstan Chhewang (Resigned on 13 December 2018) Vacant,Bharatiya Janata Party
+Leh (Ladakh),Thupstan Chhewang (Resigned on 13 December 2018) Vacant,Bharatiya Janata Party
 Udhampur,Jitendra Singh,Bharatiya Janata Party
 Jammu,Jugal Kishore,Bharatiya Janata Party
 Rajmahal,Vijay Kumar Hansdak,Jharkhand Mukti Morcha
@@ -151,7 +151,7 @@ Jamshedpur,Bidyut Baran Mahato,Bharatiya Janata Party
 Singhbhum,Laxman Giluwa,Bharatiya Janata Party
 Khunti,Karia Munda,Bharatiya Janata Party
 Lohardaga,Sudarshan Bhagat,Bharatiya Janata Party
-Palamau,Vishnu Dayal Ram,Bharatiya Janata Party
+Palamu,Vishnu Dayal Ram,Bharatiya Janata Party
 Hazaribagh,Jayant Sinha,Bharatiya Janata Party
 Chikkodi,Prakash Babanna Hukkeri,Indian National Congress
 Belgaum,Suresh Angadi,Bharatiya Janata Party
@@ -174,16 +174,16 @@ Chitradurga,B. N. Chandrappa,Indian National Congress
 Tumkur,S. P. Muddahanumegowda,Indian National Congress
 Mandya,C. S. Puttaraju (Resigned on 21 May 2018) L. R. Shivaramegowda (Elected on 6 November 2018),Janata Dal (Secular)
 Mysore,Pratap Simha,Bharatiya Janata Party
-Chamarajanagar,R. Dhruvanarayana,Indian National Congress
+Chamrajnagar,R. Dhruvanarayana,Indian National Congress
 Bangalore Rural,D. K. Suresh,Indian National Congress
 Bangalore North,D. V. Sadananda Gowda,Bharatiya Janata Party
 Bangalore Central,P. C. Mohan,Bharatiya Janata Party
 Bangalore South,Ananth Kumar (Died on 12 November 2018),Bharatiya Janata Party
-Chikballapur,Veerappa Moily,Indian National Congress
+Chikkaballapura,Veerappa Moily,Indian National Congress
 Kolar,K. H. Muniyappa,Indian National Congress
 Kasaragod,P. Karunakaran,Communist Party of India (Marxist)
 Kannur,P. K. Sreemathy,Communist Party of India (Marxist)
-Vatakara,Mullappally Ramachandran,Indian National Congress
+Vadakara,Mullappally Ramachandran,Indian National Congress
 Wayanad,M. I. Shanavas (Died on 21 November 2018) Vacant,Indian National Congress
 Kozhikode,M. K. Raghavan,Indian National Congress
 Malappuram,E. Ahamed (Died on 1 February 2017) P. K. Kunhalikutty (Elected on 17 April 2017),Indian Union Muslim League
@@ -196,7 +196,7 @@ Ernakulam,K. V. Thomas,Indian National Congress
 Idukki,Joice George,Independent
 Kottayam,Jose K. Mani (Ceased on 14 June 2018) Vacant,Kerala Congress (M)
 Alappuzha,K. C. Venugopal,Indian National Congress
-Mavelikara,Kodikunnil Suresh,Indian National Congress
+Mavelikkara,Kodikunnil Suresh,Indian National Congress
 Pathanamthitta,Anto Antony,Indian National Congress
 Kollam,N. K. Premachandran,Revolutionary Socialist Party
 Attingal,Anirudhan Sampath,Communist Party of India (Marxist)
@@ -223,7 +223,7 @@ Bhopal,Alok Sanjar,Bharatiya Janata Party
 Rajgarh,Rodmal Nagar,Bharatiya Janata Party
 Dewas,Manohar Untwal,Bharatiya Janata Party
 Ujjain,Chintamani Malviya,Bharatiya Janata Party
-Mandsour,Sudhir Gupta,Bharatiya Janata Party
+Mandsaur,Sudhir Gupta,Bharatiya Janata Party
 Ratlam,Dileep Singh Bhuria (Died on 24 June 2015) Kantilal Bhuria (Elected on 24 November 2015),Bharatiya Janata Party/ Indian National Congress
 Dhar,Savitri Thakur,Bharatiya Janata Party
 Indore,Sumitra Mahajan,Bharatiya Janata Party
@@ -240,10 +240,10 @@ Amravati,Anandrao Vithoba Adsul,Shiv Sena
 Wardha,Ramdas Tadas,Bharatiya Janata Party
 Ramtek,Krupal Balaji Tumane,Shiv Sena
 Nagpur,Nitin Gadkari,Bharatiya Janata Party
-Bhandara�Gondiya,Nanabhau Patole (Resigned on 8 December 2017) Madhukar Kukde (Elected on 31 May 2018),Bharatiya Janata Party /Nationalist Congress Party
-Gadchiroli�Chimur,Ashok Nete,Bharatiya Janata Party
+Bhandara - Gondiya,Nanabhau Patole (Resigned on 8 December 2017) Madhukar Kukde (Elected on 31 May 2018),Bharatiya Janata Party /Nationalist Congress Party
+Garhchiroli - Chimur,Ashok Nete,Bharatiya Janata Party
 Chandrapur,Hansraj Gangaram Ahir,Bharatiya Janata Party
-Yavatmal�Washim,Bhavana Pundlikrao Gawali,Shiv Sena
+Yavatmal - Washim,Bhavana Pundlikrao Gawali,Shiv Sena
 Hingoli,Rajeev Shankarrao Satav,Indian National Congress
 Nanded,Ashok Chavan,Indian National Congress
 Parbhani,Sanjay Haribhau Jadhav,Shiv Sena
@@ -252,21 +252,21 @@ Aurangabad,Chandrakant Khaire,Shiv Sena
 Dindori,Harishchandra Chavan,Bharatiya Janata Party
 Nashik,Hemant Tukaram Godse,Shiv Sena
 Palghar,Chintaman Vanaga (Died on 30 January 2018) Rajendra Gavit (Elected on 31 May 2018),Bharatiya Janata Party
-Bhiwandi,Kapil Moreshwar Patil,Bharatiya Janata Party
+Biwandi,Kapil Moreshwar Patil,Bharatiya Janata Party
 Kalyan,Shrikant Eknath Shinde,Shiv Sena
 Thane,Rajan Vichare,Shiv Sena
 Mumbai North,Gopal Chinayya Shetty,Bharatiya Janata Party
-Mumbai North West,Gajanan Kirtikar,Shiv Sena
-Mumbai North East,Kirit Somaiya,Bharatiya Janata Party
-Mumbai North Central,Poonam Mahajan,Bharatiya Janata Party
-Mumbai South Central,Rahul Shewale,Shiv Sena
+Mumbai North-West,Gajanan Kirtikar,Shiv Sena
+Mumbai North-East,Kirit Somaiya,Bharatiya Janata Party
+Mumbai North-Central,Poonam Mahajan,Bharatiya Janata Party
+Mumbai South-Central,Rahul Shewale,Shiv Sena
 Mumbai South,Arvind Sawant,Shiv Sena
 Raigad,Anant Geete,Shiv Sena
 Maval,Shrirang Chandu Barne,Shiv Sena
 Pune,Anil Shirole,Bharatiya Janata Party
 Baramati,Supriya Sule,Nationalist Congress Party
 Shirur,Adhalrao Shivaji Dattatray,Shiv Sena
-Ahmednagar,Dilipkumar Gandhi,Bharatiya Janata Party
+Ahmadnagar,Dilipkumar Gandhi,Bharatiya Janata Party
 Shirdi,Lokhande Sadashiv Kisan,Shiv Sena
 Beed,Gopinathrao Pandurang Munde (Died on 3 June 2014) Pritam Munde (Elected on 19 October 2014),Bharatiya Janata Party
 Osmanabad,Ravindra Gaikwad,Shiv Sena
@@ -275,7 +275,7 @@ Solapur,Sharad Bansode,Bharatiya Janata Party
 Madha,Vijaysinh Mohite�Patil,Nationalist Congress Party
 Sangli,Sanjaykaka Patil,Bharatiya Janata Party
 Satara,Udayanraje Bhosale,Nationalist Congress Party
-Ratnagiri�Sindhudurg,Vinayak Raut,Shiv Sena
+Ratnagiri - Sindhudurg,Vinayak Raut,Shiv Sena
 Kolhapur,Dhananjay Bhimrao Mahadik,Nationalist Congress Party
 Hatkanangle,Raju Shetti,Swabhimani Paksha
 Inner Manipur,Thokchom Meinya,Indian National Congress
@@ -287,15 +287,15 @@ Nagaland,Neiphiu Rio (Resigned on 22 February 2018) Tokheho Yepthomi (Elected on
 Bargarh,Prabhas Kumar Singh,Biju Janata Dal
 Sundargarh,Jual Oram,Bharatiya Janata Party
 Sambalpur,Nagendra Kumar Pradhan,Biju Janata Dal
-Keonjhar,Sakuntala Laguri,Biju Janata Dal
+Kendujhar,Sakuntala Laguri,Biju Janata Dal
 Mayurbhanj,Rama Chandra Hansdah,Biju Janata Dal
-Balasore,Rabindra Kumar Jena,Biju Janata Dal
+Baleshwar,Rabindra Kumar Jena,Biju Janata Dal
 Bhadrak,Arjun Charan Sethi,Biju Janata Dal
-Jajpur,Rita Tarai,Biju Janata Dal
+Jajapur,Rita Tarai,Biju Janata Dal
 Dhenkanal,Tathagata Satpathy,Biju Janata Dal
 Bolangir,Kalikesh Narayan Singh Deo,Biju Janata Dal
 Kalahandi,Arka Keshari Deo,Biju Janata Dal
-Nabarangpur,Balabhadra Majhi,Biju Janata Dal
+Nabarangapur,Balabhadra Majhi,Biju Janata Dal
 Kandhamal,Hemendra Chandra Singh (Died on 5 September 2014) Pratyusha Rajeshwari Singh (Elected on 19 October 2015),Biju Janata Dal
 Cuttack,Bhartruhari Mahtab,Biju Janata Dal
 Kendrapara,Baijayant Panda (Resigned on 18 July 2018) Vacant,Biju Janata Dal
@@ -303,7 +303,7 @@ Jagatsinghpur,Kulamani Samal,Biju Janata Dal
 Puri,Pinaki Misra,Biju Janata Dal
 Bhubaneswar,Prasanna Kumar Patasani,Biju Janata Dal
 Aska,Ladu Kishore Swain,Biju Janata Dal
-Berhampur,Sidhant Mohapatra,Biju Janata Dal
+Berhampur.,Sidhant Mohapatra,Biju Janata Dal
 Koraput,Jhina Hikaka,Biju Janata Dal
 Gurdaspur,Vinod Khanna (Died on 27 April 2017) Sunil Jakhar (Elected on 15 October 2017),Bharatiya Janata Party/Indian National Congress
 Amritsar,Amarinder Singh (Resigned on 23 November 2016) Gurjeet Singh Aujla (Elected on 11 March 2017),Indian National Congress
@@ -314,20 +314,20 @@ Anandpur Sahib,Prem Singh Chandumajra,Shiromani Akali Dal
 Ludhiana,Ravneet Singh Bittu,Indian National Congress
 Fatehgarh Sahib,Harinder Singh Khalsa,Aam Aadmi Party
 Faridkot,Sadhu Singh,Aam Aadmi Party
-Ferozpur,Sher Singh Ghubaya,Shiromani Akali Dal
+Firozpur,Sher Singh Ghubaya,Shiromani Akali Dal
 Bathinda,Harsimrat Kaur Badal,Shiromani Akali Dal
 Sangrur,Bhagwant Mann,Aam Aadmi Party
 Patiala,Dharam Vira Gandhi,Aam Aadmi Party
 Ganganagar,Nihalchand,Bharatiya Janata Party
 Bikaner,Arjun Ram Meghwal,Bharatiya Janata Party
 Churu,Rahul Kaswan,Bharatiya Janata Party
-Jhunjhunu,Santosh Ahlawat,Bharatiya Janata Party
+Jhunjhunun,Santosh Ahlawat,Bharatiya Janata Party
 Sikar,Sumedhanand Saraswati,Bharatiya Janata Party
-Tonk�Sawai Madhopur,Sukhbir Singh Jaunapuria,Bharatiya Janata Party
+Tonk - Sawai Madhopur,Sukhbir Singh Jaunapuria,Bharatiya Janata Party
 Jaipur,Ramcharan Bohara,Bharatiya Janata Party
 Alwar,Chand Nath (Died on 17 September 2017) Karan Singh Yadav (Elected on 1 February 2018),Bharatiya Janata Party/Indian National Congress
 Bharatpur,Bahadur Singh Koli,Bharatiya Janata Party
-Karauli�Dholpur,Manoj Rajoria,Bharatiya Janata Party
+Karauli - Dhaulpur,Manoj Rajoria,Bharatiya Janata Party
 Dausa,Harish Meena (Resigned on 14 November 2018) Vacant,Bharatiya Janata Party
 Jaipur Rural,Rajyavardhan Singh Rathore,Bharatiya Janata Party
 Ajmer,Sanwar Lal Jat (Died on 9 August 2017) Raghu Sharma (Elected on 1 February 2018 and Resigned on 17 December 2018) Vacant,Bharatiya Janata Party/Indian National Congress
@@ -338,13 +338,13 @@ Barmer,Sonaram Choudhary,Bharatiya Janata Party
 Jalore,Devji Patel,Bharatiya Janata Party
 Udaipur,Arjunlal Meena,Bharatiya Janata Party
 Banswara,Manshankar Ninama,Bharatiya Janata Party
-Chittorgarh,Chandraprakash Joshi,Bharatiya Janata Party
+Chittaurgarh,Chandraprakash Joshi,Bharatiya Janata Party
 Rajsamand,Hariom Singh Rathore,Bharatiya Janata Party
 Bhilwara,Subhash Baheria,Bharatiya Janata Party
 Kota,Om Birla,Bharatiya Janata Party
-Jhalawar,Dushyant Singh,Bharatiya Janata Party
+Jhalawar - Baran,Dushyant Singh,Bharatiya Janata Party
 Sikkim,Prem Das Rai,Sikkim Democratic Front
-Thiruvallur,P. Venugopal,All India Anna Dravida Munnetra Kazhagam
+Tiruvallur,P. Venugopal,All India Anna Dravida Munnetra Kazhagam
 Chennai North,T. G. Venkatesh Babu,All India Anna Dravida Munnetra Kazhagam
 Chennai South,J. Jayavardhan,All India Anna Dravida Munnetra Kazhagam
 Chennai Central,S. R. Vijayakumar,All India Anna Dravida Munnetra Kazhagam
@@ -372,17 +372,17 @@ Perambalur,R. P. Marutharajaa,All India Anna Dravida Munnetra Kazhagam
 Cuddalore,A. Arunmozhithevan,All India Anna Dravida Munnetra Kazhagam
 Chidambaram,M. Chandrakasi,All India Anna Dravida Munnetra Kazhagam
 Mayiladuthurai,R. K. Bharathi Mohan,All India Anna Dravida Munnetra Kazhagam
-Nagapattinam,K. Gopal,All India Anna Dravida Munnetra Kazhagam
+Nagappattinam,K. Gopal,All India Anna Dravida Munnetra Kazhagam
 Thanjavur,K. Parasuraman,All India Anna Dravida Munnetra Kazhagam
-Sivaganga,P. R. Senthilnathan,All India Anna Dravida Munnetra Kazhagam
+Shivaganga,P. R. Senthilnathan,All India Anna Dravida Munnetra Kazhagam
 Madurai,R. Gopalakrishnan,All India Anna Dravida Munnetra Kazhagam
 Theni,R. Parthipan,All India Anna Dravida Munnetra Kazhagam
-Virudhunagar,T. Radhakrishnan,All India Anna Dravida Munnetra Kazhagam
+Virudunagar,T. Radhakrishnan,All India Anna Dravida Munnetra Kazhagam
 Ramanathapuram,A. Anwhar Raajhaa,All India Anna Dravida Munnetra Kazhagam
 Thoothukkudi,J. Jeyasingh Thiyagaraj Natterjee,All India Anna Dravida Munnetra Kazhagam
 Tenkasi,M. Vasanthi,All India Anna Dravida Munnetra Kazhagam
 Tirunelveli,K. R. P. Prabakaran,All India Anna Dravida Munnetra Kazhagam
-Kanyakumari,Pon Radhakrishnan,Bharatiya Janata Party
+Kanniyakumari,Pon Radhakrishnan,Bharatiya Janata Party
 Adilabad,G. Nagesh,Telangana Rashtra Samithi
 Peddapalle,Balka Suman (Resigned on 17 December 2018) Vacant,Telangana Rashtra Samithi
 Karimnagar,Vinod Kumar Boianapalli,Telangana Rashtra Samithi
@@ -414,7 +414,7 @@ Amroha,Kanwar Singh Tanwar,Bharatiya Janata Party
 Meerut,Rajendra Agrawal,Bharatiya Janata Party
 Baghpat,Satyapal Singh,Bharatiya Janata Party
 Ghaziabad,Vijay Kumar Singh,Bharatiya Janata Party
-Gautam Buddh Nagar,Dr. Mahesh Sharma,Bharatiya Janata Party
+Gautam Buddha Nagar,Dr. Mahesh Sharma,Bharatiya Janata Party
 Bulandshahr,Bhola Singh,Bharatiya Janata Party
 Aligarh,Satish Kumar Gautam,Bharatiya Janata Party
 Hathras,Rajesh Kumar Diwaker,Bharatiya Janata Party
@@ -424,7 +424,7 @@ Fatehpur Sikri,Choudhary Babulal,Bharatiya Janata Party
 Firozabad,Akshay Yadav,Samajwadi Party
 Mainpuri,Mulayam Singh Yadav (Resigned on 29 May 2014) Tej Pratap Singh Yadav (Elected on 16 September 2014),Samajwadi Party
 Etah,Rajveer Singh,Bharatiya Janata Party
-Badaun,Dharmendra Yadav,Samajwadi Party
+Budaun,Dharmendra Yadav,Samajwadi Party
 Aonla,Dharmendra Kashyap,Bharatiya Janata Party
 Bareilly,Santosh Kumar Gangwar,Bharatiya Janata Party
 Pilibhit,Maneka Gandhi,Bharatiya Janata Party
@@ -458,10 +458,10 @@ Barabanki,Priyanka Singh Rawat,Bharatiya Janata Party
 Faizabad,Lallu Singh,Bharatiya Janata Party
 Ambedkar Nagar,Hari Om Pandey,Bharatiya Janata Party
 Bahraich,Savitri Bai Phule,Bharatiya Janata Party
-Kaiserganj,Brij Bhushan Sharan Singh,Bharatiya Janata Party
+Kaisarganj,Brij Bhushan Sharan Singh,Bharatiya Janata Party
 Shrawasti,Daddan Mishra,Bharatiya Janata Party
 Gonda,Kirti Vardhan Singh,Bharatiya Janata Party
-Domariyaganj,Jagdambika Pal,Bharatiya Janata Party
+Domriaganj,Jagdambika Pal,Bharatiya Janata Party
 Basti,Harish Dwivedi,Bharatiya Janata Party
 Sant Kabir Nagar,Sharad Tripathi,Bharatiya Janata Party
 Maharajganj,Pankaj Choudhary,Bharatiya Janata Party
@@ -479,60 +479,60 @@ Machhlishahr,Ram Charitra Nishad,Bharatiya Janata Party
 Ghazipur,Manoj Sinha,Bharatiya Janata Party
 Chandauli,Mahendra Nath Pandey,Bharatiya Janata Party
 Varanasi,Narendra Modi,Bharatiya Janata Party
-Bhadohi,Virendra Singh,Bharatiya Janata Party
+Sant Ravi Das Nagar (Bhadohi),Virendra Singh,Bharatiya Janata Party
 Mirzapur,Anupriya Singh Patel,Apna Dal
 Robertsganj,Chhotelal,Bharatiya Janata Party
 Tehri Garhwal,Mala Rajya Laxmi Shah,Bharatiya Janata Party
 Garhwal,Bhuwan Chandra Khanduri,Bharatiya Janata Party
 Almora,Ajay Tamta,Bharatiya Janata Party
-Nainital�Udhamsingh Nagar,Bhagat Singh Koshyari,Bharatiya Janata Party
-Haridwar,Ramesh Pokhriyal,Bharatiya Janata Party
-Cooch Behar,Renuka Sinha (Died on 17 August 2016) Parthapratim Roy (Elected on 22 November 2016),All India Trinamool Congress
+Nainital - Udhamsingh Nagar,Bhagat Singh Koshyari,Bharatiya Janata Party
+Hardwar,Ramesh Pokhriyal,Bharatiya Janata Party
+Koch Bihar,Renuka Sinha (Died on 17 August 2016) Parthapratim Roy (Elected on 22 November 2016),All India Trinamool Congress
 Alipurduars,Dasrath Tirkey,All India Trinamool Congress
 Jalpaiguri,Bijoy Chandra Barman,All India Trinamool Congress
-Darjeeling,S. S. Ahluwalia,Bharatiya Janata Party
+Darjiling,S. S. Ahluwalia,Bharatiya Janata Party
 Raiganj,Mohammed Salim,Communist Party of India (Marxist)
 Balurghat,Arpita Ghosh,All India Trinamool Congress
-Maldaha Uttar,Mausam Noor,Indian National Congress
-Maldaha Dakshin,Abu Hasem Khan Choudhury,Indian National Congress
+Maldah Uttar,Mausam Noor,Indian National Congress
+Maldah Dakshin,Abu Hasem Khan Choudhury,Indian National Congress
 Jangipur,Abhijit Mukherjee,Indian National Congress
 Baharampur,Adhir Ranjan Chowdhury,Indian National Congress
 Murshidabad,Badaruddoza Khan,Communist Party of India (Marxist)
 Krishnanagar,Tapas Paul,All India Trinamool Congress
 Ranaghat,Tapas Mandal,All India Trinamool Congress
 Bangaon,Kapil Krishna Thakur (Died on 13 October 2014) Mamata Thakur (Elected on 16 February 2015),All India Trinamool Congress
-Barrackpore,Dinesh Trivedi,All India Trinamool Congress
+Barakpur,Dinesh Trivedi,All India Trinamool Congress
 Dum Dum,Saugata Roy,All India Trinamool Congress
 Barasat,Kakali Ghoshdostidar,All India Trinamool Congress
 Basirhat,Idris Ali,All India Trinamool Congress
-Joynagar,Pratima Mondal,All India Trinamool Congress
+Jaynagar,Pratima Mondal,All India Trinamool Congress
 Mathurapur,Choudhury Mohan Jatua,All India Trinamool Congress
 Diamond Harbour,Abhishek Banerjee,All India Trinamool Congress
 Jadavpur,Sugata Bose,All India Trinamool Congress
 Kolkata Dakshin,Subrata Bakshi,All India Trinamool Congress
 Kolkata Uttar,Sudip Bandyopadhyay,All India Trinamool Congress
-Howrah,Prasun Banerjee,All India Trinamool Congress
-Uluberia,Sultan Ahmed (Died on 4 September 2017) Sajda Ahmed (Elected on 1 February 2018),All India Trinamool Congress
-Srerampur,Kalyan Banerjee,All India Trinamool Congress
-Hooghly,Ratna De (Nag),All India Trinamool Congress
-Arambagh,Aparupa Poddar (Afrin Ali),All India Trinamool Congress
+Haora,Prasun Banerjee,All India Trinamool Congress
+Uluberiya,Sultan Ahmed (Died on 4 September 2017) Sajda Ahmed (Elected on 1 February 2018),All India Trinamool Congress
+Shrirampur,Kalyan Banerjee,All India Trinamool Congress
+Hugli,Ratna De (Nag),All India Trinamool Congress
+Arambag,Aparupa Poddar (Afrin Ali),All India Trinamool Congress
 Tamluk,Suvendu Adhikari (Resigned on 19 May 2016) Dibyendu Adhikari (Elected on 22 November 2016),All India Trinamool Congress
 Kanthi,Sisir Adhikari,All India Trinamool Congress
 Ghatal,Deepak Adhikari (Dev),All India Trinamool Congress
 Jhargram,Uma Saren,All India Trinamool Congress
 Medinipur,Sandhya Roy,All India Trinamool Congress
-Purulia,Mriganka Mahato,All India Trinamool Congress
+Puruliya,Mriganka Mahato,All India Trinamool Congress
 Bankura,Moon Moon Sen,All India Trinamool Congress
 Bishnupur,Saumitra Khan,All India Trinamool Congress
-Bardhaman Purba,Sunil Kumar Mandal,All India Trinamool Congress
-Bardhaman�Durgapur,Mamtaz Sanghamita,All India Trinamool Congress
+Barddhaman Purba,Sunil Kumar Mandal,All India Trinamool Congress
+Barddhaman - Durgapur,Mamtaz Sanghamita,All India Trinamool Congress
 Asansol,Babul Supriyo,Bharatiya Janata Party
 Bolpur,Anupam Hazra,All India Trinamool Congress
 Birbhum,Satabdi Roy,All India Trinamool Congress
 Andaman & Nicobar Islands,Bishnu Pada Ray,Bharatiya Janata Party
 Chandigarh,Kirron Kher,Bharatiya Janata Party
-Dadra and Nagar Haveli,Natubhai Gomanbhai Patel,Bharatiya Janata Party
-Daman and Diu,Lalubhai Patel,Bharatiya Janata Party
+Dadra & Nagar Haveli,Natubhai Gomanbhai Patel,Bharatiya Janata Party
+Daman & Diu,Lalubhai Patel,Bharatiya Janata Party
 Chandni Chowk,Harsh Vardhan,Bharatiya Janata Party
 North East Delhi,Manoj Tiwari,Bharatiya Janata Party
 East Delhi,Maheish Girri,Bharatiya Janata Party

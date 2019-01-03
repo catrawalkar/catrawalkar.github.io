@@ -68,7 +68,7 @@ d3.queue()
             // .on("touchend", hideTooltip)
             .on("dblclick", openStateMap);
 
-        var select = d3.select('select');
+        var select = d3.selectAll('select');
 
         select.on("change", d => setColor(d3.event.target.value));
 
@@ -77,7 +77,8 @@ d3.queue()
         function setColor(val) {
 
             var colorRanges = {
-                constituencies: ["#ffb3ff", "#1a001a"]
+                constituencies: ["#ffb3ff", "#1a001a"],
+                jandhanYojna: ["white", "red"]
             }
 
             var scale = d3.scaleLinear()
@@ -88,7 +89,7 @@ d3.queue()
 
             selectStates
                 .transition()
-                .duration(2000)
+                .duration(700)
                 // .delay(2)
                 .ease(d3.easeBackIn)
                 .attr("fill", d => {
@@ -273,6 +274,8 @@ function openStateMap(d) {
                             return "orange";
                         else if (d.properties.winner_party == "Indian National Congress")
                             return "green";
+                        else if (d.properties.winner_party == undefined)
+                            return "black";
                         else {
                             return "blue";
                         }

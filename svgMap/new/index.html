@@ -150,11 +150,15 @@
                     <div class="ui segment center aligned" style="height :11.5rem">
                       <div class="ui active tab" data-tab="info">
                         <select class="ui selection dropdown nonselectable">
-                          <option value="constituencies">Constituency</option>
+                          <option value="">Select</option>
+                          <option selected="selected" value="constituencies">Constituency</option>
                         </select>
                       </div>
                       <div class="ui tab" data-tab="schemes">
-                        Schemes
+                        <select class="ui selection dropdown nonselectable">
+                          <option value="">Scheme</option>
+                          <option value="jandhanYojna">Pradhan Mantri Jan Dhan Yojana</option>
+                        </select>
                       </div>
                       <div class="ui tab" data-tab="past_results">
                         Past Results
@@ -251,6 +255,10 @@
       $('html, body').animate({
         scrollTop: $("#content").offset().top
       }, 700);
+    });
+    $('select').change(function () {
+      var el = $(this);
+      $('select').not(this).val("").dropdown('clear');
     });
   </script>
 
