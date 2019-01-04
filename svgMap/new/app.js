@@ -115,17 +115,20 @@ function showTooltip(d) {
         <p>SC: ${d.properties.sc}</p>
         <p>ST: ${d.properties.st}</p>
         `);
-    // .text(d.properties.state);
+    changeChart(d.properties.state);
+}
+
+function changeChart(d) {
+
+    myChart.config.data.labels = partyData[d].labels;
+    myChart.config.data.datasets[0].data = partyData[d].data;
+    myChart.update()
 }
 
 function hideTooltip() {
     tooltip
         .style("opacity", 0);
 }
-
-
-
-
 
 function openStateMap(d) {
     d3.select("#svg")
