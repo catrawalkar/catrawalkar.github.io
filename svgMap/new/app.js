@@ -53,7 +53,12 @@ d3.queue()
             .attr("height", "100%")
             .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
             .attr('preserveAspectRatio', 'xMinYMin')
-            .html(`<text x='370' y='30' class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Double click on the map to interact)</text>`)
+            .html(`<text x='370' y='30' class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>\
+                (Double click on the map to interact)</text>\
+                <rect x="240" y="50" width="30" height="15" style="fill:rgb(222, 235, 247);stroke-width:1;stroke:#0e4369" />\
+                <text x="275" y="63" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>\<</text>\
+                <rect x="282" y="50" width="30" height="15" style="fill:rgb(49, 130, 189);stroke-width:1;stroke:#0e4369" />\
+                <text x="405" y="62" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Number Of Constituencies</text>`)
             .selectAll(".state")
             .data(mapData.features)
             .enter()
@@ -79,7 +84,10 @@ d3.queue()
 
         var select = d3.selectAll('select');
 
-        select.on("change", d => setColor(d3.event.target.value));
+        select.on("change", d => {
+            // console.log(d3.event.target.value);
+            setColor(d3.event.target.value)
+        });
 
         setColor(select.property("value"));
 
@@ -131,7 +139,13 @@ function changeChart(d) {
 
     myChart.config.data.labels = partyData[d].labels;
     myChart.config.data.datasets[0].data = partyData[d].data;
+
+
+    myChart1.config.data.labels = partyData[d].labels;
+    myChart1.config.data.datasets[0].data = partyData[d].data;
+
     myChart.update()
+    myChart1.update()
 }
 
 function hideTooltip() {

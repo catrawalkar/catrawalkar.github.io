@@ -3,7 +3,7 @@ var canvas = document.getElementById("myChart");
 var data = {
     labels: null,
     datasets: [{
-        label: '# of Votes',
+        label: '# of Constituencies',
         data: null,
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -34,27 +34,63 @@ var myChart = new Chart(canvas, {
                 ticks: {
                     beginAtZero: true
                 }
+                // gridLines: {
+                //     color: "rgba(0, 0, 0, 0)",
+                // }
             }]
+            // xAxes: [{
+            //     gridLines: {
+            //         color: "rgba(0, 0, 0, 0)",
+            //     }
+            // }]
         },
         plugins: {
             // Change options for ALL labels of THIS CHART
             datalabels: {
                 color: '#000',
-                anchor: "end",
-                align: 'top'
+                anchor: "end"
+                // align: 'top'
             }
-        }
+        },
+        legend: {
+            position: "bottom"
+        },
     }
 });
 
-// $(".mouseover").hover(function () {
-//     console.log("hello")
-// });
-// console.log("hello")
-// $("#1").hover(function () {
-//     labels = ["pink", "gray", "green", "silver"];
-//     data2 = [10, 9, 13, 11];
-//     myChart.config.data.labels = labels;
-//     myChart.config.data.datasets[0].data = data2;
-//     myChart.update()
-// });
+
+
+var canvas1 = document.getElementById("myChart1");
+
+var myChart1 = new Chart(canvas1, {
+    type: 'pie',
+    data: data,
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+                // gridLines: {
+                //     color: "rgba(0, 0, 0, 0)",
+                // }
+            }]
+            // xAxes: [{
+            //     gridLines: {
+            //         color: "rgba(0, 0, 0, 0)",
+            //     }
+            // }]
+        },
+        plugins: {
+            // Change options for ALL labels of THIS CHART
+            datalabels: {
+                color: '#000',
+                anchor: "end"
+                // align: 'top'
+            }
+        },
+        legend: {
+            position: "bottom"
+        },
+    }
+});
