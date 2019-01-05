@@ -28,8 +28,13 @@ d3.queue()
         var width = 500;
         var height = 500;
 
+        // var projection = d3.geoMercator()
+        //     .scale(1).translate([0, 0]).precision(0);
         var projection = d3.geoMercator()
-            .scale(1).translate([0, 0]).precision(0);
+            .scale(1)
+            .translate([0, 0])
+        // .fitSize([width, height], mapData);
+
         var path = d3.geoPath().projection(projection);
 
         var bounds = path.bounds(mapData);
@@ -44,8 +49,10 @@ d3.queue()
         projection.scale(scale).translate(transl);
 
         d3.select('svg')
-            .attr("width", width)
-            .attr("height", height)
+            .attr("width", "100%")
+            .attr("height", "100%")
+            .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
+            .attr('preserveAspectRatio', 'xMinYMin')
             .html(`<text x='370' y='30' class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Double click on the map to interact)</text>`)
             .selectAll(".state")
             .data(mapData.features)
@@ -141,7 +148,9 @@ function openStateMap(d) {
         .classed("segment", true)
         .style("margin", "50px")
         .style("position", "absolute")
-        .style("top", "0px");
+        .style("top", "0px")
+        .style("height", "75%")
+        .style("width", "75%");
     d3.queue()
         .defer(d3.json, './assets/json/' + d.properties.state + '.json')
         .defer(d3.csv, './assets/csv/Election 2014.csv', function (row) {
@@ -197,8 +206,10 @@ function openStateMap(d) {
                 .classed('stateSvg', true)
 
             d3.select('.stateSvg')
-                .attr("width", width)
-                .attr("height", height)
+                .attr("width", "100%")
+                .attr("height", "100%")
+                .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
+                .attr('preserveAspectRatio', 'xMinYMin')
                 .html(`<text class='nonselectable' x='300' y='25' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Click outside to return)</text>`)
                 .selectAll(".districts")
                 .data(mapData.features)

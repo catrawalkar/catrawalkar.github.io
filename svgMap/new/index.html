@@ -117,17 +117,18 @@
       <div class="ui middle aligned stackable grid container">
         <div class="row">
           <div class="nine wide column">
-            <div id="svg" style="position: relative; width: 570px; height: 575px;" class="ui raised segment">
+            <!-- <div id="svg" style="position: relative; width: 570px; height: 575px;" class="ui raised segment"> -->
+            <div id="svg" class="ui raised segment">
               <a class="ui olive ribbon label nonselectable"><i class="map outline icon"></i>India Map</a>
               <div class="ui active dimmer" id="loader">
                 <div class="ui indeterminate text loader">Loading Map</div>
               </div>
-              <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
+              <svg version="1.1" width="960" height="610" baseProfile="full" xmlns="http://www.w3.org/2000/svg"></svg>
             </div>
           </div>
           <div class="seven wide column">
 
-            <div class="ui segments" style="height: 18rem">
+            <div class="ui segments">
               <div class="ui top attached secondary segment">
                 <p class="nonselectable">Select Options</p>
               </div>
@@ -147,7 +148,7 @@
                     </div>
                   </div>
                   <div class="twelve wide stretched column">
-                    <div class="ui segment center aligned" style="height :11.5rem">
+                    <div class="ui segment center aligned">
                       <div class="ui active tab" data-tab="info">
                         <select class="ui selection dropdown nonselectable">
                           <option value="">Select</option>
@@ -172,7 +173,7 @@
                 </div>
               </div>
             </div>
-            <div id="chart" style="position: relative; height: 22rem;" class="ui raised segment">
+            <div id="chart" class="ui raised segment">
               <a class="ui olive ribbon label nonselectable"><i class="map outline icon"></i>Chart</a>
               <canvas id="myChart"></canvas>
             </div>
