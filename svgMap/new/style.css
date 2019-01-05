@@ -101,6 +101,7 @@
 svg {
     margin: 0 auto;
     display: block;
+
 }
 
 path {
@@ -138,36 +139,18 @@ path {
     margin: 0;
 }
 
-.state {
+.state,
+.districts {
+    stroke-width: 0.5px;
+    stroke: #000;
     cursor: pointer
 }
-
-/* .tooltip:before {
-    content: '';
-    position: absolute;
-    border: 5px solid transparent;
-    border-bottom-color: black;
-    top: -25px;
-    left: 50%;
-    margin-left: -6px;
-
-} */
-
-/* .tooltip:after {
-    border: 10px solid;
-    border-color: white transparent transparent;
-    content: "";
-    left: 50%;
-    margin-left: -10px;
-    position: absolute;
-    top: 100%;
-} */
 
 .mouseover {
     /* fill: red; */
     /* -webkit-filter: drop-shadow(-5px -5px 5px #000); */
     stroke-width: 2px;
-    stroke: rgb(34, 34, 34)
+    stroke: #0e4369;
 }
 
 .nonselectable {

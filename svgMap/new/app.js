@@ -46,7 +46,7 @@ d3.queue()
         d3.select('svg')
             .attr("width", width)
             .attr("height", height)
-            .html(`<text x='370' y='30' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Double click on the map to interact)</text>`)
+            .html(`<text x='370' y='30' class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Double click on the map to interact)</text>`)
             .selectAll(".state")
             .data(mapData.features)
             .enter()
@@ -56,8 +56,10 @@ d3.queue()
             .attr("fill", "none")
             .on("mousemove", showTooltip)
             .on("mouseover", function (d) {
+
                 d3.select(this)
-                    .classed("mouseover", true);
+                    .classed("mouseover", true)
+                    .raise();
             })
             .on("mouseleave", function (d) {
                 d3.select(this)
@@ -77,7 +79,7 @@ d3.queue()
         function setColor(val) {
 
             var colorRanges = {
-                constituencies: ["#ffb3ff", "#1a001a"],
+                constituencies: ["rgb(222, 235, 247)", "rgb(49, 130, 189)"],
                 jandhanYojna: ["white", "red"]
             }
 
@@ -215,11 +217,11 @@ function openStateMap(d) {
                         <p>Party: ${d.properties.winner_party}</p>
                         <p>${d.properties.winner}</p>
                         `);
-                    // .text(d.properties.state);
                 })
                 .on("mouseover", function (d) {
                     d3.select(this)
-                        .classed("mouseover", true);
+                        .classed("mouseover", true)
+                        .raise();
                 })
                 .on("mouseleave", function (d) {
                     d3.select(this)
