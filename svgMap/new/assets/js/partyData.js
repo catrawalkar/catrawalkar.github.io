@@ -1,16 +1,4 @@
 var partyData = {
-    Maharashtra: {
-        labels: ["TDP", "YSRCP", "BJP", "Vacant"],
-        data: [2, 4, 7, 2, 6]
-    },
-    Gujarat: {
-        labels: ["BJP", "b", "c"],
-        data: [2, 4, 7]
-    }
-}
-
-
-var partyData = {
     "Andhra Pradesh": {
         labels: ["TDP", "YSRCP", "BJP", "Vacant"],
         data: [15, 3, 2, 5]
@@ -155,4 +143,16 @@ var partyData = {
         labels: ["AINRC"],
         data: [1]
     }
+}
+
+var janDhanYojana = {
+    topfive: {
+        labels: ["Uttar Pradesh", "Bihar", "West Bengal", "Madhya Pradesh", "Rajasthan"],
+        data: [5.21, 3.76, 3.26, 2.95, 2.38]
+    },
+    toptenpercentage: {
+        labels: ["Chhattisgarh", "Assam", "Madhya Pradesh", "Jharkhand", "Bihar", "West Bengal"],
+        data: [53.88, 45.78, 40.66, 36.28, 36.15, 35.80]
+    }
+
 }
