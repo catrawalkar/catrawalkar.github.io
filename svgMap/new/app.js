@@ -21,6 +21,9 @@ function selectedOption(val) {
     if (val == "jandhanYojna") {
         jandhanYojna();
     }
+    if (val == "partywise") {
+        partyWise();
+    }
 }
 
 $('svg').on('load', (function () {
