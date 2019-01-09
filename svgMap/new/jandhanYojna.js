@@ -12,6 +12,10 @@ function jandhanYojna() {
         })
         .await(function (error, mapData, yojnaData) {
             if (error) throw error;
+            $("#partyWiseRadio").css("display", "none");
+            $("#firstChart").css("display", "block");
+            $("#chart1").css("display", "block");
+
 
             yojnaData.forEach(row => {
 
@@ -36,7 +40,18 @@ function jandhanYojna() {
                 (height - scale * (bounds[1][1] + bounds[0][1])) / 2
             ];
             projection.scale(scale).translate(transl);
+            /////
+            tool_tip.html(function (d) {
+                return `
+                <h3>${d.properties.state}</h3>
+                <p>Total Beneficiaries: ${numRoundoff(d.properties.beneficiary)}</p>
+                <p>Total Balance: ${d.properties.balance} Cr</p>
+                <p>Total Rupay Cards issued: ${numRoundoff(d.properties.cards)}</p>
+                <p>${d.properties.jandhanYojna} % of Population got Benefitted</p>
 
+                `
+            })
+            /////
             d3.select('svg')
                 .attr("width", "100%")
                 .attr("height", "100%")
@@ -58,7 +73,7 @@ function jandhanYojna() {
                 .classed("state", true)
                 .attr("d", path)
                 .attr("fill", "none")
-                .on("mousemove", showTooltip)
+                .on("mousemove", tool_tip.show)
                 .on("mouseover", function (d) {
 
                     d3.select(this)
@@ -69,9 +84,9 @@ function jandhanYojna() {
                     d3.select(this)
                         .classed("mouseover", false);
                 })
-                // .on("touchstart", showTooltip)
-                .on("mouseout", hideTooltip);
-            // .on("touchend", hideTooltip)
+                .on("touchstart", tool_tip.show)
+                .on("mouseout", tool_tip.hide)
+                .on("touchend", tool_tip.hide);
             // .on("dblclick", openStateMap);
 
             setColor("jandhanYojna");
@@ -101,22 +116,6 @@ function jandhanYojna() {
             }
         });
 
-    function showTooltip(d) {
-
-        tooltip
-            .style("opacity", 1)
-            .style("left", (d3.event.x - (tooltip.node().offsetWidth / 2)) + "px")
-            .style("top", (d3.event.y + 30) + "px")
-            .html(`
-                    <h3>${d.properties.state}</h3>
-                    <p>Total Beneficiaries: ${numRoundoff(d.properties.beneficiary)}</p>
-                    <p>Total Balance: ${d.properties.balance} Cr</p>
-                    <p>Total Rupay Cards issued: ${numRoundoff(d.properties.cards)}</p>
-                    <p>${d.properties.jandhanYojna} % of Population got Benefitted</p>
-
-                    `);
-    }
-
     function changeChart() {
 
         myChart.config.data.labels = janDhanYojana.topfive.labels;
@@ -133,16 +132,10 @@ function jandhanYojna() {
         myChart1.update()
     }
 
-    function hideTooltip() {
-        tooltip
-            .style("opacity", 0);
-    }
-
     function numRoundoff(val) {
         if (val >= 10000000) val = (val / 10000000).toFixed(2) + ' Cr';
         else if (val >= 100000) val = (val / 100000).toFixed(2) + ' Lac';
         else if (val >= 1000) val = (val / 1000).toFixed(2) + ' K';
         return val;
     }
-
 }
