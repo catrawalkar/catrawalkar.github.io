@@ -30,6 +30,11 @@ $('svg').on('load', (function () {
     $('#loader').hide();
 }));
 
+var tool_tip = d3.tip()
+    .attr("class", "d3-tip")
+    .offset([-8, 0]);
+d3.select("svg").call(tool_tip);
+
 // d3.queue()
 //     .defer(d3.json, './assets/json/India.json')
 //     .defer(d3.csv, './assets/csv/India.csv', function (row) {

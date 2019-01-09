@@ -17,6 +17,8 @@ function partyWise() {
             });
             $("#firstChart").css("display", "none");
             $("#partyWiseRadio").css("display", "block");
+            $("#chart1").css("display", "block");
+
             console.log($("input[name='throughput']").val())
             // $("#chart").html(`<div id="partyWiseRadio">helloooo</div>`)
             var width = 500;
@@ -37,6 +39,16 @@ function partyWise() {
             ];
             projection.scale(scale).translate(transl);
 
+            tool_tip
+                .html(function (d) {
+                    return `
+                    <h3>${d.properties.constituency}</h3>
+                    <p>Winning Party: ${d.properties.winner_party}</p>
+                    <p>Winner Candidate: ${d.properties.winner}</p>
+                    `
+                });
+            d3.select("svg").call(tool_tip);
+
             d3.select('svg')
                 .attr("width", "100%")
                 .attr("height", "100%")
@@ -55,7 +67,7 @@ function partyWise() {
                 .classed("constituency", true)
                 .attr("d", path)
                 .attr("fill", "none")
-                .on("mousemove", showTooltip)
+                .on("mousemove", tool_tip.show)
                 .on("mouseover", function (d) {
 
                     d3.select(this)
@@ -66,18 +78,18 @@ function partyWise() {
                     d3.select(this)
                         .classed("mouseover", false);
                 })
-                // .on("touchstart", showTooltip)
-                .on("mouseout", hideTooltip)
-            // .on("touchend", hideTooltip)
+                .on("touchstart", tool_tip.show)
+                .on("mouseout", tool_tip.hide)
+                .on("touchend", tool_tip.hide)
             // .on("dblclick", openStateMap);
 
-            var select = d3.selectAll('input[name="throughput"]');
+            // var select = d3.selectAll('input[name="throughput"]');
 
-            select.on("change", d => {
+            // select.on("change", d => {
 
-                console.log(d3.event.target.value);
-                setColor(d3.event.target.value)
-            });
+            //     console.log(d3.event.target.value);
+            //     setColor(d3.event.target.value)
+            // });
 
             // setColor(select.property("value"));
             setColor("PARTY");
@@ -85,14 +97,14 @@ function partyWise() {
 
             function setColor(val) {
 
-                var colorRanges = {
-                    constituencies: ["rgb(222, 235, 247)", "rgb(49, 130, 189)"],
-                    jandhanYojna: ["white", "red"]
-                }
+                // var colorRanges = {
+                //     constituencies: ["rgb(222, 235, 247)", "rgb(49, 130, 189)"],
+                //     jandhanYojna: ["white", "red"]
+                // }
 
-                var scale = d3.scaleLinear()
-                    .domain([0, d3.max(constituencyData, d => d[val])])
-                    .range(colorRanges[val]);
+                // var scale = d3.scaleLinear()
+                //     .domain([0, d3.max(constituencyData, d => d[val])])
+                //     .range(colorRanges[val]);
 
                 var selectStates = d3.selectAll(".constituency");
 
@@ -102,64 +114,68 @@ function partyWise() {
                     // .delay(2)
                     .ease(d3.easeBackIn)
                     .attr("fill", d => {
-                        // var data = d.properties[val];
-                        // return data ? scale(data) : "#f00";
-                        if (d.properties.winner_party == "Bharatiya Janata Party")
-                            return "orange";
-                        else if (d.properties.winner_party == "Indian National Congress")
-                            return "green";
-                        else if (d.properties.winner_party == "POK")
-                            return "#929694";
-                        else if (d.properties.winner_party == "Vacant")
-                            return "#929694";
-                        else if (d.properties.winner_party == "Telugu Desam Party")
-                            return "yellow";
-                        else if (d.properties.winner_party == "YSR Congress Party")
-                            return "#41aef9";
-                        else if (d.properties.winner_party == "All India United Democratic Front")
-                            return "#094B02";
-                        else if (d.properties.winner_party == "Independent")
-                            return "#824715";
-                        else if (d.properties.winner_party == "Rashtriya Lok Samta Party")
-                            return "#824715";
-                        else if (d.properties.winner_party == "Lok Janshakti Party")
-                            return "#3C2AD5";
-                        else if (d.properties.winner_party == "Rashtriya Janata Dal")
-                            return "#A7C900";
-                        else if (d.properties.winner_party == "Janata Dal (United)")
-                            return "#8B1BD2";
-                        else if (d.properties.winner_party == "Indian National Lok Dal")
-                            return "#41aef9";
-                        else if (d.properties.winner_party == "Jammu and Kashmir National Conference")
-                            return "#41aef9";
-                        else if (d.properties.winner_party == "Jharkhand Mukti Morcha")
-                            return "#8B1BD2";
-                        else if (d.properties.winner_party == "Janata Dal (Secular)")
-                            return "#D05200";
-                        else if (d.properties.winner_party == "Communist Party of India (Marxist)")
-                            return "red";
-                        else if (d.properties.winner_party == "Shiv Sena")
-                            return "#0FC9C9";
-                        else if (d.properties.winner_party == "Nationalist Congress Party")
-                            return "#824715";
-                        else if (d.properties.winner_party == "Biju Janata Dal")
-                            return "#D05200";
-                        else if (d.properties.winner_party == "Shiromani Akali Dal")
-                            return "#41aef9";
-                        else if (d.properties.winner_party == "Aam Aadmi Party")
-                            return "#A1BEAA";
-                        else if (d.properties.winner_party == "All India Anna Dravida Munnetra Kazhagam")
-                            return "#A1BEAA";
-                        else if (d.properties.winner_party == "Telangana Rashtra Samithi")
-                            return "#A10079";
-                        else if (d.properties.winner_party == "Samajwadi Party")
-                            return "#094B02";
-                        else if (d.properties.winner_party == "All India Trinamool Congress")
-                            return "#00984F";
-                        else {
-                            return "blue";
-                        }
-                    });
+                        console.log(partyColor[d.properties.winner_party])
+                        return partyColor[d.properties.winner_party];
+                    })
+                //         .attr("fill", d => {
+                //             // var data = d.properties[val];
+                //             // return data ? scale(data) : "#f00";
+                //             if (d.properties.winner_party == "Bharatiya Janata Party")
+                //                 return "orange";
+                //             else if (d.properties.winner_party == "Indian National Congress")
+                //                 return "green";
+                //             else if (d.properties.winner_party == "POK")
+                //                 return "#929694";
+                //             else if (d.properties.winner_party == "Vacant")
+                //                 return "#929694";
+                //             else if (d.properties.winner_party == "Telugu Desam Party")
+                //                 return "yellow";
+                //             else if (d.properties.winner_party == "YSR Congress Party")
+                //                 return "#41aef9";
+                //             else if (d.properties.winner_party == "All India United Democratic Front")
+                //                 return "#094B02";
+                //             else if (d.properties.winner_party == "Independent")
+                //                 return "#824715";
+                //             else if (d.properties.winner_party == "Rashtriya Lok Samta Party")
+                //                 return "#824715";
+                //             else if (d.properties.winner_party == "Lok Janshakti Party")
+                //                 return "#3C2AD5";
+                //             else if (d.properties.winner_party == "Rashtriya Janata Dal")
+                //                 return "#A7C900";
+                //             else if (d.properties.winner_party == "Janata Dal (United)")
+                //                 return "#8B1BD2";
+                //             else if (d.properties.winner_party == "Indian National Lok Dal")
+                //                 return "#41aef9";
+                //             else if (d.properties.winner_party == "Jammu and Kashmir National Conference")
+                //                 return "#41aef9";
+                //             else if (d.properties.winner_party == "Jharkhand Mukti Morcha")
+                //                 return "#8B1BD2";
+                //             else if (d.properties.winner_party == "Janata Dal (Secular)")
+                //                 return "#D05200";
+                //             else if (d.properties.winner_party == "Communist Party of India (Marxist)")
+                //                 return "red";
+                //             else if (d.properties.winner_party == "Shiv Sena")
+                //                 return "#0FC9C9";
+                //             else if (d.properties.winner_party == "Nationalist Congress Party")
+                //                 return "#824715";
+                //             else if (d.properties.winner_party == "Biju Janata Dal")
+                //                 return "#D05200";
+                //             else if (d.properties.winner_party == "Shiromani Akali Dal")
+                //                 return "#41aef9";
+                //             else if (d.properties.winner_party == "Aam Aadmi Party")
+                //                 return "#A1BEAA";
+                //             else if (d.properties.winner_party == "All India Anna Dravida Munnetra Kazhagam")
+                //                 return "#A1BEAA";
+                //             else if (d.properties.winner_party == "Telangana Rashtra Samithi")
+                //                 return "#A10079";
+                //             else if (d.properties.winner_party == "Samajwadi Party")
+                //                 return "#094B02";
+                //             else if (d.properties.winner_party == "All India Trinamool Congress")
+                //                 return "#00984F";
+                //             else {
+                //                 return "blue";
+                //             }
+                //         });
             }
         });
 
@@ -183,7 +199,6 @@ function partyWise() {
         myChart.config.data.labels = partyData[d].labels;
         myChart.config.data.datasets[0].data = partyData[d].data;
         myChart.config.data.datasets[0].label = "# of Constituencies"
-
 
         myChart1.config.data.labels = partyData[d].labels;
         myChart1.config.data.datasets[0].data = partyData[d].data;

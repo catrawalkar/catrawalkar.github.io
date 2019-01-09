@@ -154,5 +154,45 @@ var janDhanYojana = {
         labels: ["Chhattisgarh", "Assam", "Madhya Pradesh", "Jharkhand", "Bihar", "West Bengal"],
         data: [53.88, 45.78, 40.66, 36.28, 36.15, 35.80]
     }
+}
 
+
+var partyColor = {
+    "Bharatiya Janata Party": "#ff7900",
+    "Indian National Congress": "#00cccc",
+    "POK": "#EDEDED",
+    "Vacant": "#EDEDED",
+    "Telugu Desam Party": "#ffed00",
+    "YSR Congress Party": "#0062ff",
+    "All India United Democratic Front": "#bf9719",
+    "Independent": "#9c9c9c",
+    "Rashtriya Lok Samta Party": "#cd0000",
+    "Lok Janshakti Party": "#41007a",
+    "Rashtriya Janata Dal": "#009200",
+    "Janata Dal (United)": "#003366",
+    "Indian National Lok Dal": "#004a00",
+    "Jammu and Kashmir National Conference": "#ff3d3d",
+    "Jharkhand Mukti Morcha": "#ff6f67",
+    "Janata Dal (Secular)": "#80dd2f",
+    "Communist Party of India (Marxist)": "#ff0000",
+    "Shiv Sena": "#ffaf00",
+    "Nationalist Congress Party": "#0093AF",
+    "Biju Janata Dal": "#005f00",
+    "Shiromani Akali Dal": "#ff6800",
+    "Aam Aadmi Party": "#00b549",
+    "All India Anna Dravida Munnetra Kazhagam": "#000000",
+    "Telangana Rashtra Samithi": "#ff89ce",
+    "Samajwadi Party": "#841e00",
+    "All India Trinamool Congress": "#1bea29",
+    "Apna Dal": "#6b00c9",
+    "All India N.R. Congress": "#ffaa4f",
+    "Nationalist Democratic Progressive Party": "#fd4242",
+    "Pattali Makkal Katchi": "#0000b5",
+    "Sikkim Democratic Front": "#ff0000",
+    "Indian Union Muslim League": "#006c00",
+    "Rashtriya Lok Dal": "#330066",
+    "Revolutionary Socialist Party": "#ff0000",
+    "Jammu and Kashmir Peoples Democratic Party": "#008970",
+    "Swabhimani Paksha": "#c900a5",
+    "POK": "#EDEDED"
 }
