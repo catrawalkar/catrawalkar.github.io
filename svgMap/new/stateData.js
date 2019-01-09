@@ -12,6 +12,8 @@ function stateData() {
         .await(function (error, mapData, constituencyData) {
             if (error) throw error;
 
+            $("#partyWiseRadio").css("display", "none");
+            $("#firstChart").css("display", "block");
             constituencyData.forEach(row => {
 
                 var states = mapData.features.filter(d => d.properties.ST_NM === row.state);

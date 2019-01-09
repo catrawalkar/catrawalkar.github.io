@@ -12,7 +12,8 @@ function jandhanYojna() {
         })
         .await(function (error, mapData, yojnaData) {
             if (error) throw error;
-
+            $("#partyWiseRadio").css("display", "none");
+            $("#firstChart").css("display", "block");
             yojnaData.forEach(row => {
 
                 var states = mapData.features.filter(d => d.properties.ST_NM === row.state);

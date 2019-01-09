@@ -15,8 +15,10 @@ function partyWise() {
                 var pcs = mapData.features.filter(d => d.properties.PC_NAME === row.constituency);
                 pcs.forEach(pc => pc.properties = row);
             });
-            debugger;
-
+            $("#firstChart").css("display", "none");
+            $("#partyWiseRadio").css("display", "block");
+            console.log($("input[name='throughput']").val())
+            // $("#chart").html(`<div id="partyWiseRadio">helloooo</div>`)
             var width = 500;
             var height = 500;
 
@@ -69,12 +71,13 @@ function partyWise() {
             // .on("touchend", hideTooltip)
             // .on("dblclick", openStateMap);
 
-            // var select = d3.selectAll('select');
+            var select = d3.selectAll('input[name="throughput"]');
 
-            // select.on("change", d => {
-            //     // console.log(d3.event.target.value);
-            //     setColor(d3.event.target.value)
-            // });
+            select.on("change", d => {
+
+                console.log(d3.event.target.value);
+                setColor(d3.event.target.value)
+            });
 
             // setColor(select.property("value"));
             setColor("PARTY");
@@ -82,14 +85,14 @@ function partyWise() {
 
             function setColor(val) {
 
-                // var colorRanges = {
-                //     constituencies: ["rgb(222, 235, 247)", "rgb(49, 130, 189)"],
-                //     jandhanYojna: ["white", "red"]
-                // }
+                var colorRanges = {
+                    constituencies: ["rgb(222, 235, 247)", "rgb(49, 130, 189)"],
+                    jandhanYojna: ["white", "red"]
+                }
 
-                // var scale = d3.scaleLinear()
-                //     .domain([0, d3.max(constituencyData, d => d[val])])
-                //     .range(colorRanges[val]);
+                var scale = d3.scaleLinear()
+                    .domain([0, d3.max(constituencyData, d => d[val])])
+                    .range(colorRanges[val]);
 
                 var selectStates = d3.selectAll(".constituency");
 
@@ -172,7 +175,7 @@ function partyWise() {
             <p>SC: ${d.properties.winner}</p>
             <p>ST: ${d.properties.st}</p>
             `);
-        changeChart(d.properties.state);
+        // changeChart(d.properties.state);
     }
 
     function changeChart(d) {
