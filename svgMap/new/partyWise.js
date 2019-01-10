@@ -105,8 +105,9 @@ function partyWise() {
       function setColor(val) {
         console.log(val);
         var colorRanges = {
-          BJP: ["#fee6ce", "#fdae6b"],
-          INC: ["#deebf7", "#9ecae1"]
+          INC: ["#e5f5e0", "#a1d99b"],
+          BJP: ["#deebf7", "#9ecae1"],
+          
         }
 
         var scale = d3.scaleLinear()
