@@ -57,14 +57,13 @@ function jandhanYojna() {
                 .attr("height", "100%")
                 .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
                 .attr('preserveAspectRatio', 'xMinYMin')
-                .html(`<text x='370' y='30' class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>\
-            (Double click on the map to interact)</text>\
-            <rect x="240" y="50" width="30" height="15" style="fill: RGB(254,224,210);stroke-width:1;stroke:black" />\
-            <text x="275" y="63" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>\<</text>\
-            <rect x="282" y="50" width="30" height="15" style="fill: RGB(222,45,38);stroke-width:1;stroke: black"/>\
-            <text x="395" y="62" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Account Beneficiaries</text>\
-            <text x="395" y="82" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Under JanDhan Yojna</text>\
-            <text x="395" y="102" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Data as on 19 December 2018</text>`)
+                .html(`
+            <rect x="240" y="30" width="30" height="15" style="fill: RGB(254,224,210);stroke-width:1;stroke:black" />\
+            <text x="275" y="43" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>\<</text>\
+            <rect x="282" y="30" width="30" height="15" style="fill: RGB(222,45,38);stroke-width:1;stroke: black"/>\
+            <text x="395" y="42" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Account Beneficiaries</text>\
+            <text x="395" y="62" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Under JanDhan Yojna</text>\
+            <text x="395" y="82" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Data as on 19 December 2018</text>`)
 
                 .selectAll(".state")
                 .data(mapData.features)

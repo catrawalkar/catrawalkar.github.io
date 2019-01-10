@@ -48,6 +48,7 @@ function stateData() {
                             `
                 });
             /////
+
             d3.select('svg')
                 .attr("width", "100%")
                 .attr("height", "100%")
@@ -219,7 +220,11 @@ function stateData() {
                     .attr("height", "100%")
                     .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
                     .attr('preserveAspectRatio', 'xMinYMin')
-                    .html(`<text class='nonselectable' x='300' y='25' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Click outside to return)</text>`)
+                    .html(`<text class='nonselectable' x='300' y='25' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Click outside to return)</text>\
+                    <rect x="0" y="0" width="30" height="15" style="fill:#ff7900;stroke-width:1;stroke:#0e4369" />\
+            <text x="110" y="13" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Bharatiya Janata Party</text>\
+            <rect x="0" y="20" width="30" height="15" style="fill:#00cccc;stroke-width:1;stroke:#0e4369" />\
+            <text x="120" y="33" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Indian National Congress</text>`)
                     .selectAll(".districts")
                     .data(mapData.features)
                     .enter()
