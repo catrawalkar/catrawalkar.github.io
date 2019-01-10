@@ -1,11 +1,11 @@
 function partyWise() {
   d3.queue()
     .defer(d3.json, "./assets/json/india_2014_parliament.json")
-    .defer(d3.csv, "./assets/csv/Election 2014.csv", function(row) {
+    .defer(d3.csv, "./assets/csv/partyWise.csv", function(row) {
       return {
         constituency: row.Constituency,
-        winner: row.Winner,
-        winner_party: row.WinnerParty
+        BJP: row.BJP,
+        INC: row.WinnerParty
       };
     })
     .await(function(error, mapData, constituencyData) {
@@ -122,7 +122,6 @@ function partyWise() {
           // .delay(2)
           .ease(d3.easeBackIn)
           .attr("fill", d => {
-            console.log(partyColor[d.properties.winner_party]);
             return partyColor[d.properties.winner_party];
           });
       }
