@@ -1,14 +1,14 @@
 function partyWise() {
   d3.queue()
     .defer(d3.json, "./assets/json/india_2014_parliament.json")
-    .defer(d3.csv, "./assets/csv/Election 2014.csv", function(row) {
+    .defer(d3.csv, "./assets/csv/partyWise.csv", function (row) {
       return {
         constituency: row.Constituency,
-        winner: row.Winner,
-        winner_party: row.WinnerParty
+        BJP: row.BJP,
+        INC: row.INC
       };
     })
-    .await(function(error, mapData, constituencyData) {
+    .await(function (error, mapData, constituencyData) {
       if (error) throw error;
 
       constituencyData.forEach(row => {
@@ -21,8 +21,6 @@ function partyWise() {
       $("#partyWiseRadio").css("display", "block");
       $("#chart1").css("display", "block");
 
-      console.log($("input[name='throughput']").val());
-      // $("#chart").html(`<div id="partyWiseRadio">helloooo</div>`)
       var width = 500;
       var height = 500;
 
@@ -47,11 +45,11 @@ function partyWise() {
       ];
       projection.scale(scale).translate(transl);
 
-      tool_tip.html(function(d) {
+      tool_tip.html(function (d) {
         return `
                     <h3>${d.properties.constituency}</h3>
-                    <p>Winning Party: ${d.properties.winner_party}</p>
-                    <p>Winner Candidate: ${d.properties.winner}</p>
+                    <p>BJP: ${d.properties.BJP}</p>
+                    <p>INC: ${d.properties.INC}</p>
                     `;
       });
       d3.select("svg").call(tool_tip);
@@ -80,39 +78,41 @@ function partyWise() {
         .attr("d", path)
         .attr("fill", "none")
         .on("mousemove", tool_tip.show)
-        .on("mouseover", function(d) {
+        .on("mouseover", function (d) {
           d3.select(this)
             .classed("mouseover", true)
             .raise();
         })
-        .on("mouseleave", function(d) {
+        .on("mouseleave", function (d) {
           d3.select(this).classed("mouseover", false);
         })
         .on("touchstart", tool_tip.show)
         .on("mouseout", tool_tip.hide)
         .on("touchend", tool_tip.hide);
       // .on("dblclick", openStateMap);
+      // console.log($("input[name='selectedParty']").val());
 
-      // var select = d3.selectAll('input[name="throughput"]');
+      var select = d3.selectAll('input[name="selectedParty"]');
 
-      // select.on("change", d => {
+      select.on("change", d => {
+        // console.log(d3.event.target.value);
+        setColor(d3.event.target.value);
+      });
 
-      //     console.log(d3.event.target.value);
-      //     setColor(d3.event.target.value)
-      // });
-
-      // setColor(select.property("value"));
-      setColor("PARTY");
+      setColor(select.property("value"));
+      // setColor("PARTY");
 
       function setColor(val) {
-        // var colorRanges = {
-        //     constituencies: ["rgb(222, 235, 247)", "rgb(49, 130, 189)"],
-        //     jandhanYojna: ["white", "red"]
-        // }
+        console.log(val);
+        var colorRanges = {
+          INC: ["#e5f5e0", "#a1d99b"],
+          BJP: ["#deebf7", "#9ecae1"],
+          
+        }
 
-        // var scale = d3.scaleLinear()
-        //     .domain([0, d3.max(constituencyData, d => d[val])])
-        //     .range(colorRanges[val]);
+        var scale = d3.scaleLinear()
+          .domain([0, d3.max(constituencyData, d => d[val])])
+          .range(colorRanges[val]);
 
         var selectStates = d3.selectAll(".constituency");
 
@@ -121,10 +121,35 @@ function partyWise() {
           .duration(700)
           // .delay(2)
           .ease(d3.easeBackIn)
+          // .attr("fill", d => {
+          //   return partyColor[d.properties.winner_party];
+          // });
           .attr("fill", d => {
-            console.log(partyColor[d.properties.winner_party]);
-            return partyColor[d.properties.winner_party];
-          });
+            var data = d.properties[val];
+            // console.log(data)
+            // if(data>0 && data<15){
+            //   return "rgb(254, 237, 222)"
+            // }
+            // if(data>15 && data<35){
+            //   return "rgb(253, 190, 133)"
+            // }
+            // if(data>35 && data<45){
+            //   return "rgb(253, 141, 60)"
+            // }
+            // if(data>45 && data<60){
+            //   return "rgb(230, 85, 13)"
+            // }
+            // if(data>60){
+            //   return "rgb(166, 54, 3)"
+            // }
+            // if(data==undefined || data==""){
+            //   return "#EDEDED"
+            // }
+
+
+            
+            return data ? scale(data) : "#EDEDED";
+          })
       }
     });
 
@@ -173,14 +198,14 @@ function partyWise() {
       .style("width", "75%");
     d3.queue()
       .defer(d3.json, "./assets/json/" + d.properties.state + ".json")
-      .defer(d3.csv, "./assets/csv/Election 2014.csv", function(row) {
+      .defer(d3.csv, "./assets/csv/Election 2014.csv", function (row) {
         return {
           constituency: row.Constituency,
           winner: row.Winner,
           winner_party: row.WinnerParty
         };
       })
-      .await(function(error, mapData, constituencyData) {
+      .await(function (error, mapData, constituencyData) {
         if (error) {
           console.log(error);
         }
@@ -252,7 +277,7 @@ function partyWise() {
           .classed("districts", true)
           .attr("d", path)
           .attr("fill", "none")
-          .on("mousemove", function(d) {
+          .on("mousemove", function (d) {
             tooltip
               .style("opacity", 1)
               .style("left", d3.event.x - tooltip.node().offsetWidth / 2 + "px")
@@ -262,16 +287,16 @@ function partyWise() {
                             <p>${d.properties.winner}</p>
                             `);
           })
-          .on("mouseover", function(d) {
+          .on("mouseover", function (d) {
             d3.select(this)
               .classed("mouseover", true)
               .raise();
           })
-          .on("mouseleave", function(d) {
+          .on("mouseleave", function (d) {
             d3.select(this).classed("mouseover", false);
           })
           // .on("touchstart", showTooltip)
-          .on("mouseout", function() {
+          .on("mouseout", function () {
             tooltip.style("opacity", 0);
           });
         // .on("touchend", hideTooltip);
@@ -283,7 +308,7 @@ function partyWise() {
           return this == d3.event.target;
         }
 
-        d3.select("body").on("click", function() {
+        d3.select("body").on("click", function () {
           var outside = stateMapWithContent.filter(equalToEventTarget).empty();
           if (outside) {
             stateMap.remove();

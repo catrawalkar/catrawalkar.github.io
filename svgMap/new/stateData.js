@@ -184,7 +184,7 @@ function stateData() {
                     var pcs = mapData.features.filter(d => d.properties.PC_NAME === row.constituency);
                     pcs.forEach(pc => pc.properties = row);
                 });
-
+                debugger
                 var width = 400;
                 var height = 400;
 
@@ -291,65 +291,6 @@ function stateData() {
                             console.log(partyColor[d.properties.winner_party])
                             return partyColor[d.properties.winner_party];
                         })
-                    // .attr("fill", d => {
-                    //     // var data = d.properties[val];
-                    //     // return data ? scale(data) : "#f00";
-                    //     if (d.properties.winner_party == "Bharatiya Janata Party")
-                    //         return "orange";
-                    //     else if (d.properties.winner_party == "Indian National Congress")
-                    //         return "green";
-                    //     else if (d.properties.winner_party == "POK")
-                    //         return "#929694";
-                    //     else if (d.properties.winner_party == "Vacant")
-                    //         return "#929694";
-                    //     else if (d.properties.winner_party == "Telugu Desam Party")
-                    //         return "yellow";
-                    //     else if (d.properties.winner_party == "YSR Congress Party")
-                    //         return "#41aef9";
-                    //     else if (d.properties.winner_party == "All India United Democratic Front")
-                    //         return "#094B02";
-                    //     else if (d.properties.winner_party == "Independent")
-                    //         return "#824715";
-                    //     else if (d.properties.winner_party == "Rashtriya Lok Samta Party")
-                    //         return "#824715";
-                    //     else if (d.properties.winner_party == "Lok Janshakti Party")
-                    //         return "#3C2AD5";
-                    //     else if (d.properties.winner_party == "Rashtriya Janata Dal")
-                    //         return "#A7C900";
-                    //     else if (d.properties.winner_party == "Janata Dal (United)")
-                    //         return "#8B1BD2";
-                    //     else if (d.properties.winner_party == "Indian National Lok Dal")
-                    //         return "#41aef9";
-                    //     else if (d.properties.winner_party == "Jammu and Kashmir National Conference")
-                    //         return "#41aef9";
-                    //     else if (d.properties.winner_party == "Jharkhand Mukti Morcha")
-                    //         return "#8B1BD2";
-                    //     else if (d.properties.winner_party == "Janata Dal (Secular)")
-                    //         return "#D05200";
-                    //     else if (d.properties.winner_party == "Communist Party of India (Marxist)")
-                    //         return "red";
-                    //     else if (d.properties.winner_party == "Shiv Sena")
-                    //         return "#0FC9C9";
-                    //     else if (d.properties.winner_party == "Nationalist Congress Party")
-                    //         return "#824715";
-                    //     else if (d.properties.winner_party == "Biju Janata Dal")
-                    //         return "#D05200";
-                    //     else if (d.properties.winner_party == "Shiromani Akali Dal")
-                    //         return "#41aef9";
-                    //     else if (d.properties.winner_party == "Aam Aadmi Party")
-                    //         return "#A1BEAA";
-                    //     else if (d.properties.winner_party == "All India Anna Dravida Munnetra Kazhagam")
-                    //         return "#A1BEAA";
-                    //     else if (d.properties.winner_party == "Telangana Rashtra Samithi")
-                    //         return "#A10079";
-                    //     else if (d.properties.winner_party == "Samajwadi Party")
-                    //         return "#094B02";
-                    //     else if (d.properties.winner_party == "All India Trinamool Congress")
-                    //         return "#00984F";
-                    //     else {
-                    //         return "blue";
-                    //     }
-                    // });
                 }
             });
     }
