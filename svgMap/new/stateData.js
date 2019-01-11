@@ -185,7 +185,7 @@ function stateData() {
                     var pcs = mapData.features.filter(d => d.properties.PC_NAME === row.constituency);
                     pcs.forEach(pc => pc.properties = row);
                 });
-                debugger
+
                 var width = 400;
                 var height = 400;
 
@@ -211,21 +211,98 @@ function stateData() {
                         `
                     });
                 /////
+
+                /////
+                // You can use these functions to get the unique values of a property in an array of objects
+
+                // Get the unique parties
+                function uniqueBy(arr, mapper) {
+                    return unique(pluck(arr, mapper));
+                }
+
+                function unique(arr) {
+                    return arr.filter(function (value, index, self) {
+                        return self.indexOf(value) === index;
+                    });
+                }
+
+                function pluck(arr, mapper) {
+                    return arr.map(function (d) {
+                        return typeof (mapper) === "string" ? d.properties[mapper] : mapper(d);
+                    });
+                }
+
+                var uniqueParties = uniqueBy(mapData.features, "winner_party"); // ["BJP", "INC", "BSP"]
+                console.log(uniqueParties)
+
+
+                /////
+
                 d3.select('.stateMap')
                     .append('svg')
                     .classed('stateSvg', true)
-
-                d3.select('.stateSvg')
+                var svg = d3.select('.stateSvg')
                     .attr("width", "100%")
                     .attr("height", "100%")
                     .attr('viewBox', '0 0 ' + Math.min(width, height) + ' ' + Math.min(width, height))
                     .attr('preserveAspectRatio', 'xMinYMin')
-                    .html(`<text class='nonselectable' x='300' y='25' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Click outside to return)</text>\
-                    <rect x="0" y="0" width="30" height="15" style="fill:#ff7900;stroke-width:1;stroke:#0e4369" />\
-            <text x="110" y="13" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Bharatiya Janata Party</text>\
-            <rect x="0" y="20" width="30" height="15" style="fill:#00cccc;stroke-width:1;stroke:#0e4369" />\
-            <text x="120" y="33" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Indian National Congress</text>`)
-                    .selectAll(".districts")
+                    .html(`<text class='nonselectable' x='300' y='25' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>(Click outside to return)</text>`)
+                /////
+                debugger
+                var x = 43;
+                var x1 = 10;
+                var y = 13;
+                var y1 = 0;
+                var legend = svg
+                    .selectAll(".legend-item")
+                    .data(uniqueParties)
+                    .enter()
+                    .append("g")
+                    .attr("class", "legend-item");
+                legend.append("rect")
+                    .attr("x", function () {
+                        // x += 10;
+                        return x1;
+                    })
+                    .attr("y", function () {
+                        y1 += 18;
+                        return y1;
+                    })
+                    .attr("width", "30")
+                    .attr("height", "15")
+                    .attr("fill", function (d) {
+                        return partyColor[d]
+                    })
+                // .attr("style","fill:rgb(222, 235, 247);stroke-width:1;stroke:#0e4369")
+                legend.append("text")
+                    .attr("class", "nonselectable")
+                    .attr("x", function () {
+                        // x += 10;
+                        return x;
+                    })
+                    .attr("y", function () {
+                        y += 18;
+                        return y;
+                    })
+                    // .attr("text-anchor", 'middle')
+                    .attr("font-size", '1em')
+                    .attr("font-family", 'sans-serif')
+                    .attr("fill", 'black')
+                    .html(function (d) {
+                        return d
+                    })
+
+                /////
+
+                // d3.select('.stateSvg')
+                //     .attr("width", "100%")
+                //     .attr("height", "100%")
+                //         <rect x="0" y="0" width="30" height="15" style="fill:#ff7900;stroke-width:1;stroke:#0e4369" />\
+                // <text x="110" y="13" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Bharatiya Janata Party</text>\
+                // <rect x="0" y="20" width="30" height="15" style="fill:#00cccc;stroke-width:1;stroke:#0e4369" />\
+                // <text x="120" y="33" class='nonselectable' font-style='italic' text-anchor='middle' font-size='1em' font-family='sans-serif' fill='black'>Indian National Congress</text>`)
+
+                svg.selectAll(".districts")
                     .data(mapData.features)
                     .enter()
                     .append("path")
@@ -293,7 +370,6 @@ function stateData() {
                         .duration(700)
                         .ease(d3.easeBackIn)
                         .attr("fill", d => {
-                            console.log(partyColor[d.properties.winner_party])
                             return partyColor[d.properties.winner_party];
                         })
                 }

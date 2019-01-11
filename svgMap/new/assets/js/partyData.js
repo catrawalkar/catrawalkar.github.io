@@ -180,7 +180,7 @@ var partyColor = {
     "Biju Janata Dal": "#005f00",
     "Shiromani Akali Dal": "#ff6800",
     "Aam Aadmi Party": "#00b549",
-    "All India Anna Dravida Munnetra Kazhagam": "#000000",
+    "All India Anna Dravida Munnetra Kazhagam": "#009900",
     "Telangana Rashtra Samithi": "#ff89ce",
     "Samajwadi Party": "#841e00",
     "All India Trinamool Congress": "#1bea29",
