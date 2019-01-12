@@ -24,6 +24,9 @@ function selectedOption(val) {
     if (val == "partywise") {
         partyWise();
     }
+    if (val == "mudraYojna") {
+        mudraYojna();
+    }
 }
 
 $('svg').on('load', (function () {
