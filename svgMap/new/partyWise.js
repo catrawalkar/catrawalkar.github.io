@@ -4,8 +4,13 @@ function partyWise() {
     .defer(d3.csv, "./assets/csv/Election 2014.csv", function (row) {
       return {
         constituency: row.Constituency,
+        winner_party: row.WinnerParty,
+        compare_party: row.CompareParty,
         BJP: row.BJP,
-        INC: row.INC
+        INC: row.INC,
+        BSP: row.BSP,
+        SP: row.SP,
+        BSPP: row.BSPP
       };
     })
     .await(function (error, mapData, constituencyData) {
@@ -19,7 +24,7 @@ function partyWise() {
       });
       $("#firstChart").css("display", "none");
       $("#partyWiseRadio").css("display", "block");
-      $("#chart1").css("display", "block");
+      $("#chart1").css("display", "none");
 
       var width = 500;
       var height = 500;
@@ -48,8 +53,13 @@ function partyWise() {
       tool_tip.html(function (d) {
         return `
                     <h3>${d.properties.constituency}</h3>
+                    <p>${d.properties.winner_party}</p>
                     ${ d.properties.BJP.length>0 ? '<p>BJP: '+d.properties.BJP+'%</p>' :''}
                     ${ d.properties.INC.length>0 ? '<p>INC: '+d.properties.INC+'%</p>' :''}
+                    ${ d.properties.BSP.length>0 ? '<p>BSP: '+d.properties.BSP+'%</p>' :''}
+                    ${ d.properties.SP.length>0 ? '<p>SP: '+d.properties.SP+'%</p>' :''}
+                    ${ d.properties.BSPP.length>0 ? '<p>BSP + SP: '+d.properties.BSPP+'%</p>' :''}
+
                     `;
       });
       d3.select("svg").call(tool_tip);
@@ -108,45 +118,54 @@ function partyWise() {
         setColor(d3.event.target.value);
       });
 
-      setColor(select.property("value"));
+      setColor("PARTY");
       // setColor("PARTY");
 
       function setColor(val) {
-        var colorRanges = {
-          INC: ["#e5f5e0", "#a1d99b"],
-          BJP: ["#deebf7", "#9ecae1"],
-          
-        }
-
-        var scale = d3.scaleLinear()
-          .domain([0, d3.max(constituencyData, d => d[val])])
-          .range(colorRanges[val]);
 
         var selectStates = d3.selectAll(".constituency");
 
-        selectStates
-          .transition()
-          .duration(600)
-          // .delay(2)
-          .ease(d3.easeBackIn)
-          .attr("fill", d => {
-            var data = d.properties[val];
-            return data ? scale(data) : "#EDEDED";
-          })
+        if (val == "PARTY") {
+          selectStates
+            .transition()
+            .duration(700)
+            .ease(d3.easeBackIn)
+            .attr("fill", d => {
+              return partyColor[d.properties.winner_party];
+            })
+        } else if (val == "compareParty") {
+          selectStates
+            .transition()
+            .duration(700)
+            .ease(d3.easeBackIn)
+            .attr("fill", d => {
+              return partyColor[d.properties.compare_party];
+            })
+
+        } else {
+          var colorRanges = {
+            INC: ["#d2efef", "#6dc6c6"],
+            // 1: ["#bdd7e7", "#41b6c4"],
+            BJP: ["#ffe0c4", "#ffca9b"],
+            BSPP: ["#deebf7", "#9ecae1"],
+            BSP: ["#efedf5", "#bcbddc"],
+            SP: ["#fee0d2", "#ef3b2c"]
+          }
+
+          var scale = d3.scaleLinear()
+            .domain([0, d3.max(constituencyData, d => d[val])])
+            .range(colorRanges[val]);
+
+          selectStates
+            .transition()
+            .duration(600)
+            // .delay(2)
+            .ease(d3.easeBackIn)
+            .attr("fill", d => {
+              var data = d.properties[val];
+              return data ? scale(data) : "#EDEDED";
+            })
+        }
       }
     });
-
-  function changeChart(d) {
-    myChart.config.data.labels = partyData[d].labels;
-    myChart.config.data.datasets[0].data = partyData[d].data;
-    myChart.config.data.datasets[0].label = "# of Constituencies";
-
-    myChart1.config.data.labels = partyData[d].labels;
-    myChart1.config.data.datasets[0].data = partyData[d].data;
-    myChart1.config.type = "pie";
-    myChart1.config.data.datasets[0].label = "# of Constituencies";
-
-    myChart.update();
-    myChart1.update();
-  }
 }

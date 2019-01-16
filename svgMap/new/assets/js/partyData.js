@@ -341,5 +341,7 @@ var partyColor = {
     "Revolutionary Socialist Party": "#ff0000",
     "Jammu and Kashmir Peoples Democratic Party": "#008970",
     "Swabhimani Paksha": "#c900a5",
-    "POK": "#EDEDED"
+    "BSPP": "#841e00",
+    "POK": "#EDEDED",
+    "": "#EDEDED"
 }

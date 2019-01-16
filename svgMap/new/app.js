@@ -27,6 +27,9 @@ function selectedOption(val) {
     if (val == "mudraYojna") {
         mudraYojna();
     }
+    if (val == "demographic") {
+        demographic();
+    }
 }
 
 $('svg').on('load', (function () {

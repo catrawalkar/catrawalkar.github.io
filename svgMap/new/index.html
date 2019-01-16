@@ -142,7 +142,7 @@
               </div>
               <div class="ui segment">
                 <div class="ui grid">
-                  <div class="four wide column" style="padding-right: 0px">
+                  <div class="four wide column" style="padding-right: 0px; padding-left: 8px">
                     <div class="ui vertical fluid tabular menu">
                       <a class="active item" data-tab="info">
                         Informative
@@ -152,6 +152,9 @@
                       </a>
                       <a class="item" data-tab="live_results">
                         Live
+                      </a>
+                      <a class="item" data-tab="demographic">
+                        Demographic
                       </a>
                     </div>
                   </div>
@@ -171,8 +174,11 @@
                           <option value="mudraYojna">Mudra Yojna</option>
                         </select>
                       </div>
-                      <div class="ui tab" data-tab="past_results">
-                        Past Results
+                      <div class="ui tab" data-tab="demographic">
+                        <select class="ui selection dropdown nonselectable">
+                          <option value="">Select</option>
+                          <option value="demographic">Demographic</option>
+                        </select>
                       </div>
                       <div class="ui tab" data-tab="live_results">
                         <h3>Live Results</h3>
@@ -195,7 +201,13 @@
                     <label>Select One Party</label>
                     <div class="field">
                       <div class="ui slider checkbox">
-                        <input checked="checked" type="radio" value="BJP" name="selectedParty">
+                        <input checked="checked" type="radio" value="PARTY" name="selectedParty">
+                        <label>All Parties</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui slider checkbox">
+                        <input type="radio" value="BJP" name="selectedParty">
                         <label>Bharatiya Janata Party</label>
                       </div>
                     </div>
@@ -203,6 +215,24 @@
                       <div class="ui slider checkbox">
                         <input type="radio" value="INC" name="selectedParty">
                         <label>Indian National Congress</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui slider checkbox">
+                        <input type="radio" value="BSP" name="selectedParty">
+                        <label>Bahujan Samaj Party</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui slider checkbox">
+                        <input type="radio" value="SP" name="selectedParty">
+                        <label>Samajwadi Party</label>
+                      </div>
+                    </div>
+                    <div class="field">
+                      <div class="ui slider checkbox">
+                        <input type="radio" value="compareParty" name="selectedParty">
+                        <label>Vote Share BSP + SP v/s BJP</label>
                       </div>
                     </div>
                   </div>
@@ -309,6 +339,7 @@
   <script src="stateData.js"></script>
   <script src="partyWise.js"></script>
   <script src="mudraYojna.js"></script>
+  <script src="demographic.js"></script>
   <script src="jandhanYojna.js"></script>
   <script src="chart.js"></script>
 
